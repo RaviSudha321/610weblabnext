@@ -1,0 +1,19 @@
+.service_box {
+    border: 1px solid var(--light-blue);
+    box-shadow: 4px 4px 4px 0 rgba(48, 169, 224, 0.15);
+    border-radius: 5px;
+    padding: 30px 30px 50px;
+    text-align: center;
+}
+
+.servicebox_title {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.servicebox_description {
+    margin-top: 15px;
+    line-height: 1.87;
+    color: var(--text-color);
+}

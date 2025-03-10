@@ -1,0 +1,149 @@
+.hirings_sec .description {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.hirings_content {
+    margin-top: 70px;
+}
+
+.hiring_cats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.hiring_cats li {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 5px 15px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hiring_cats li:hover,
+.hiring_cats li.active {
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+.hirings_items {
+    margin-top: 35px;
+}
+
+.hiring_actions .global_btn {
+    text-align: right;
+}
+
+/* @media (min-width:1281px) and (max-width:1500px){
+    .hirings_filter .hiring_cats li {
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+} */
+
+@media (min-width:1025px) and (max-width:1280px) {
+
+    /* .hirings_filter .hiring_cats li {
+        font-size: 18px;
+        padding: 5px 15px;
+    } */
+    .hirings_filter .hiring_cats {
+        column-gap: 15px;
+    }
+
+    .hiring_item .hiring_description {
+        padding-right: 0;
+    }
+
+    .hiring_item .vacancy_positions {
+        width: 160px;
+        padding-inline: 30px;
+    }
+
+    .hiring_item .hiring_description {
+        width: calc(100% - 640px);
+        padding-left: 30px;
+    }
+}
+
+@media (max-width:1024px) {
+    .hirings_filter .hiring_cats li {
+        font-size: 16px;
+        padding: 5px 12px;
+    }
+
+    .hirings_filter .hiring_cats {
+        column-gap: 15px;
+    }
+
+    .hirings_sec .hirings_content {
+        margin-top: 50px;
+    }
+
+    .hiring_item .vacancy_titles {
+        width: 40%;
+    }
+
+    .hiring_item .vacancy_positions,
+    .hiring_item .hiring_actions {
+        width: 30%;
+    }
+
+    .hiring_item .hiring_description {
+        width: 100%;
+        order: 1;
+        padding: 0;
+        margin-top: 25px;
+    }
+
+    .hiring_actions .global_btn a {
+        min-width: unset;
+        padding: 11px 20px;
+    }
+}
+
+@media (max-width:767px) {
+    .hirings_items .hiring_item {
+        padding: 25px 25px 30px;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    body .hiring_item .vacancy_titles {
+        width: 100%;
+        text-align: center;
+    }
+
+    body .hiring_item .vacancy_positions,
+    body .hiring_item .hiring_actions {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .hiring_item .hiring_description {
+        text-align: center;
+        order: inherit;
+    }
+
+    body .hiring_actions .global_btn {
+        text-align: center;
+    }
+
+    .hiring_item .vacancy_positions {
+        border-inline: 0;
+        border-block: 1px solid #CFCFCF;
+        padding-inline: 0;
+        padding-block: 30px;
+        width: 250px !important;
+        margin-inline: auto;
+    }
+
+}

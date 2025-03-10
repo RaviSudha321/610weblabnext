@@ -1,0 +1,58 @@
+.cta_sec {
+    padding-block: 35px;
+    background-image: url(../../../public/images/cta-bg.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cta_content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cta_left_col {
+    width: 60%;
+}
+
+.cta_right_col {
+    width: 40%;
+    text-align: right;
+}
+
+.cta_left_col .sec_title {
+    text-align: left;
+    color: #fff;
+}
+
+.cta_left_col .description {
+    color: #fff;
+    margin-top: 5px;
+    max-width: 630px;
+}
+
+.cta_btn .global_btn a {
+    background-color: #fff;
+}
+
+.cta_btn .global_btn a:hover {
+    background-color: var(--light-blue);
+}
+
+@media (max-width:767px) {
+    .cta_sec .cta_content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cta_content .cta_right_col,
+    .cta_content .cta_left_col {
+        width: 100%;
+    }
+
+    .cta_sec .cta_left_col .sec_title,
+    .cta_left_col .description,
+    .cta_btn .global_btn {
+        text-align: center;
+    }
+}

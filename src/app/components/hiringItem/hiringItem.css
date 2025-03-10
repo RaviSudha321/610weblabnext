@@ -1,0 +1,58 @@
+.hiring_item {
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    padding: 35px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.hiring_item.hidden {
+    display: none;
+}
+
+.hiring_item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.vacancy_titles {
+    width: 280px;
+    align-content: center;
+}
+
+.vacancy_positions {
+    border-inline: 1px solid #CFCFCF;
+    padding-inline: 50px;
+    width: 200px;
+    align-content: center;
+}
+
+.hiring_actions {
+    width: 200px;
+    align-content: center;
+}
+
+.hiring_description {
+    width: calc(100% - 680px);
+    padding-inline: 40px;
+    align-content: center;
+}
+
+.vacancy_titles .designation {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.vacancy_titles .sub_title {
+    margin: 16px 0 20px;
+}
+
+.hiring_item .experience {
+    font-weight: 500;
+}
+
+.hiring_item .positions {
+    font-weight: 600;
+}

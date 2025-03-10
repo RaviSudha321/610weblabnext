@@ -1,0 +1,62 @@
+.experience_sec {
+    background-color: #F6FCFF;
+    padding-bottom: 0;
+}
+
+.experience_content {
+    max-width: 1083px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.experience_list {
+    margin: 22px 0 35px;
+    max-width: 540px;
+    margin-inline: auto;
+}
+
+.experience_list ul {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    column-gap: 45px;
+    row-gap: 15px;
+    justify-content: space-between;
+}
+
+.experience_list ul li {
+    width: calc(50% - 22.5px);
+    position: relative;
+    padding-left: 25px;
+}
+
+.experience_list ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 16px;
+    height: 12px;
+    background-image: url(../../../public/images/check.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.experience_content .team_img {
+    margin-top: 40px;
+    display: flex;
+}
+
+@media (max-width:767px) {
+    .experience_content .experience_list ul {
+        column-gap: 30px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience_content .experience_list ul li {
+        width: 100%;
+        max-width: 260px;
+    }
+}

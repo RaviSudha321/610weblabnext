@@ -1,0 +1,45 @@
+.icon_box {
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #30A9E0;
+    box-shadow: 4px 4px 4px 0 #30A9E026;
+    padding: 25px 40px;
+}
+
+.icon_box .icon {
+    padding: 15px 15px 11px;
+    border: 1px solid #30A9E0;
+    background-color: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.iconbox_title {
+    margin-bottom: 20px;
+    color: #2D3748;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+@media (max-width:1024px) {
+    body .icon_box {
+        padding: 25px 30px;
+    }
+
+    body .iconbox_title {
+        font-size: 23px;
+    }
+}
+
+@media (max-width:640px) {
+    body .icon_box {
+        padding: 25px;
+    }
+
+    body .icon_box .icon,
+    body .iconbox_title {
+        margin-bottom: 15px;
+    }
+}

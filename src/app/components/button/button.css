@@ -1,0 +1,52 @@
+.global_btn a {
+    font-size: 16px;
+    line-height: 2;
+    text-decoration: none;
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 19px;
+    color: var(--light-blue);
+    transition: all 0.2s linear;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.global_btn a:hover {
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+.global_btn a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.global_btn a:hover path {
+    fill: #fff;
+}
+
+.global_btn.whatsapp svg {
+    height: 21px;
+    width: 21px;
+}
+
+.global_btn.whatsapp svg {
+    color: #25D366;
+}
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    body .global_btn a {
+        padding: 11px 15px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width:767px) {
+    body .global_btn a {
+        padding: 10px 15px;
+        min-width: 160px;
+    }
+}

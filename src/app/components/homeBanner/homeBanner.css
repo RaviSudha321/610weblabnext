@@ -1,0 +1,302 @@
+.home_banner_sec {
+    padding: 40px 40px 100px;
+    background-image: url(/images/home-banner-bg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.home_banner_content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.banner_left_col {
+    width: 52%;
+}
+
+.banner_right_col {
+    width: 48%;
+    padding-left: 110px;
+}
+
+.home_banner_title {
+    font-size: 50px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.home_banner_title span {
+    font-weight: 700;
+    color: var(--light-blue);
+}
+
+.home_banner_desc {
+    margin-top: 16px;
+    line-height: 1.87;
+}
+
+.home_banner_buttons {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner_form {
+    box-shadow: 0 0 15px 0 rgba(26, 184, 234, 0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.banner_form .form_title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.banner_form .form_desc {
+    margin: 20px 0;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.website_audit_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.website_audit_form .form_field {
+    position: relative;
+    margin: 0;
+    width: calc(50% - 10px);
+}
+
+.website_audit_form label {
+    line-height: 1.5;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 7px;
+}
+
+.website_audit_form input:not([type="submit"]),
+.website_audit_form select,
+.website_audit_form textarea {
+    width: 100%;
+    color: var(--text-color);
+    padding: 12px 15px;
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    outline: none;
+    -webkit-appearance: none;
+    min-height: 46px;
+}
+
+.website_audit_form .select_field:after {
+    content: '';
+    position: absolute;
+    right: 21px;
+    top: 49px;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    rotate: 45deg;
+    pointer-events: none;
+}
+
+.website_audit_form .form_field.comment_field {
+    width: 100%;
+}
+
+.website_audit_form .submit_btn {
+    margin: 0 !important;
+    align-content: center;
+    width: calc(40% - 10px);
+}
+
+.website_audit_form input[type="submit"] {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--light-blue);
+    border: 0;
+    border-radius: 5px;
+    padding: 13px 48px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.website_audit_form input[type="submit"]:hover {
+    background-color: var(--dark-blue);
+}
+
+.website_audit_form .rating_img {
+    width: calc(60% - 10px);
+    text-align: right;
+}
+
+.website_audit_form .rating_img img {
+    max-width: 250px;
+}
+
+.form_field span.error {
+    color: #f00;
+    font-size: 13px;
+}
+
+.form_field.has_error input,
+.form_field.has_error select,
+.form_field.has_error textarea {
+    border-color: #f00;
+}
+
+form .field_error {
+    color: #f00;
+    font-size: 13px;
+}
+
+.website_audit_form input.has_error,
+.website_audit_form select.has_error,
+.website_audit_form textarea.has_error {
+    border-color: #f00;
+}
+
+@media (min-width:1281px) and (max-width:1500px) {
+    .home_banner_content .banner_right_col {
+        padding-left: 70px;
+    }
+
+    .website_audit_form label {
+        font-size: 14px;
+    }
+
+    .banner_left_col .home_banner_title {
+        font-size: 45px;
+    }
+
+    .website_audit_form .submit_btn input[type="submit"] {
+        padding: 12px 45px;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+    .home_banner_content .banner_right_col {
+        padding-left: 50px;
+    }
+
+    .website_audit_form label {
+        font-size: 14px;
+    }
+
+    .banner_left_col .home_banner_title {
+        font-size: 40px;
+    }
+
+    form.website_audit_form .form_field.phone_field,
+    form.website_audit_form .form_field.select_field {
+        width: 100%;
+    }
+
+    .website_audit_form .submit_btn input[type="submit"] {
+        padding: 10px 35px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1024px) {
+    .home_banner_content .banner_left_col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home_banner_content .banner_right_col {
+        width: 100%;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .banner_left_col .home_banner_title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .home_banner_content .home_banner_buttons {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .home_banner_content .banner_form {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    body .home_banner_sec {
+        padding-inline: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    .home_banner_content .banner_left_col .home_banner_title {
+        font-size: 34px;
+    }
+
+    body .home_banner_sec {
+        padding-inline: 20px;
+    }
+}
+
+@media (min-width:641px) {
+    .website_audit_form .submit_btn {
+        max-width: fit-content;
+    }
+}
+
+@media (max-width:640px) {
+    body .home_banner_content .banner_left_col .home_banner_title {
+        font-size: 30px;
+    }
+
+    .home_banner_content .home_banner_buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home_banner_content .home_banner_buttons .global_btn a {
+        min-width: 200px;
+    }
+
+    .home_banner_content .banner_form {
+        padding: 30px 25px 40px;
+        max-width: 400px;
+    }
+
+    .banner_right_col .banner_form .form_title {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .banner_right_col .banner_form .form_desc {
+        margin-top: 10px;
+    }
+
+    .banner_form .website_audit_form .form_field {
+        width: 100%;
+    }
+
+    .website_audit_form .submit_btn {
+        text-align: center;
+    }
+
+    .banner_form .website_audit_form .form_field.rating_img {
+        text-align: center;
+    }
+}

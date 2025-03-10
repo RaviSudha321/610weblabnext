@@ -1,0 +1,109 @@
+.blogs_sec {
+    background-image: url(/images/blogs-bg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.blogs_sec .container-fluid {
+    max-width: 1590px;
+    margin-inline: auto;
+}
+
+.blog_sec_header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.blogs_carousel {
+    position: relative;
+    margin-top: 35px;
+    padding-inline: 74px;
+}
+
+.blogs_carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+    padding-left: 2px;
+}
+
+.blogs_carousel .owl-nav button {
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex !important;
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    transition: all 0.2s linear;
+}
+
+.blogs_carousel .owl-nav button:hover {
+    background-color: var(--light-blue) !important;
+}
+
+.blogs_carousel .owl-nav button:hover path {
+    fill: #fff;
+}
+
+.blogs_carousel .owl-nav .owl-prev {
+    left: 0;
+}
+
+.blogs_carousel .owl-nav .owl-next {
+    right: 0;
+}
+
+.error_message {
+    text-align: center;
+    color: #f00;
+    margin-top: 20px;
+}
+
+@media (min-width:641px) and (max-width:991px) {
+    .blogs_sec .blogs_carousel {
+        padding: 64px;
+    }
+
+    body .blogs_carousel .owl-nav button {
+        width: 44px;
+    }
+}
+
+@media (max-width:767px) {
+    .blogs_sec .blog_sec_header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+@media (max-width:640px) {
+    .blogs_sec .blogs_carousel {
+        padding: 0;
+    }
+
+    body .blogs_carousel .owl-nav button {
+        position: static !important;
+        transform: none;
+        margin: 0 10px !important;
+    }
+
+    .blogs_carousel .owl-nav {
+        margin-top: 40px !important;
+    }
+
+    .blogs_carousel {
+        max-width: 400px;
+        margin-inline: auto;
+    }
+}

@@ -1,0 +1,9 @@
+.copyright_sec {
+    padding: 28px 20px !important;
+    text-align: center;
+    background-color: var(--dark-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}

@@ -1,0 +1,64 @@
+.office_location_sec {
+    padding-inline: 40px;
+}
+
+.office_location_sec .description {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.office_location_inner_sec {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 33.33% calc(66.66% - 30px);
+    grid-gap: 30px;
+}
+
+.office_address {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    padding: 25px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.office_address h3 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.office_address h4 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.office_address_bottom {
+    color: #fff;
+}
+
+@media (max-width:991px) {
+    .office_location_sec .office_location_inner_sec {
+        grid-template-columns: 100%;
+    }
+
+    .office_location_inner_sec .office_address {
+        padding: 25px 25px 30px;
+    }
+
+    .office_address .office_address_top h4 {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:767px) {
+    body .office_location_sec {
+        padding-inline: 20px;
+    }
+}

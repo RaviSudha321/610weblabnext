@@ -1,0 +1,42 @@
+.work_culture_sec {
+    background-color: var(--dark-blue);
+}
+
+.work_culture_sec .sec_title {
+    color: #fff;
+}
+
+.work_culture_sec .description {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.work_culture_gallery {
+    margin-top: 45px;
+    /* display: grid;
+    grid-gap: 13px;
+    grid-template-columns: 25% 26% 30.5% calc(18.5% - 39px);
+    grid-template-rows: 201px 238px 254px; */
+}
+
+/* .work_culture_img:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.work_culture_img:nth-child(6) {
+    grid-row: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+}
+.work_culture_img img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width:767px){
+    .work_culture_sec .work_culture_content .description {
+        margin-top: 20px;
+    }
+} */

@@ -1,0 +1,125 @@
+.projects_sec {
+    background-image: linear-gradient(180deg, var(--dark-blue) 50%, #fff 50%);
+    text-align: center;
+}
+
+.projects_sec .container {
+    max-width: 1590px;
+}
+
+.projects_sec .sec_title {
+    color: #fff;
+}
+
+.projects_carousel {
+    margin: 90px 0 40px;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 27px;
+    flex-wrap: wrap;
+    padding-inline: 74px;
+}
+
+.projects_carousel:before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: -40px;
+    width: calc(100% - 240px);
+    height: calc(100% + 80px);
+    background-color: var(--light-blue);
+    border-radius: 10px;
+}
+
+.project_item {
+    z-index: 1;
+}
+
+.project_img {
+    display: flex;
+}
+
+.projects_sec .projects_action {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects_carousel .owl-nav button {
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex !important;
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    transition: all 0.2s linear;
+}
+
+.projects_carousel .owl-nav button:hover {
+    background-color: var(--light-blue) !important;
+}
+
+.projects_carousel .owl-nav button:hover path {
+    fill: #fff;
+}
+
+.projects_carousel .owl-nav .owl-prev {
+    left: 0;
+}
+
+.projects_carousel .owl-nav .owl-next {
+    right: 0;
+}
+
+@media (max-width:640px) {
+    .projects_sec .projects_carousel {
+        padding: 0;
+        margin-top: 70px;
+    }
+
+    body .projects_carousel .owl-nav button {
+        position: static !important;
+        transform: none;
+        margin: 0 10px !important;
+    }
+
+    .projects_carousel .owl-nav {
+        margin-top: 60px !important;
+    }
+
+    .projects_carousel {
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    .projects_sec .projects_carousel:before {
+        height: calc(100% - 50px);
+        top: -30px;
+        width: calc(100% - 80px);
+        left: 40px;
+    }
+
+    .projects_sec .projects_action {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:480px) {
+    .projects_sec .projects_action {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects_action .global_btn a {
+        min-width: 200px;
+    }
+}

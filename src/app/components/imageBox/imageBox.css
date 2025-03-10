@@ -1,0 +1,20 @@
+.imageBox {
+    padding: 40px 15px;
+    border: 1px solid #30A9E0;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 0 #30A9E026;
+    text-align: center;
+}
+
+.box_img img {
+    width: auto;
+    max-width: 100%;
+}
+
+.imagebox_title {
+    color: #2D3748;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 15px 0 10px;
+}

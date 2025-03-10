@@ -1,0 +1,56 @@
+.success_counter {
+    display: flex;
+    align-items: flex-start;
+    gap: 33px;
+    flex-wrap: wrap;
+}
+
+.success_counter_item {
+    display: flex;
+    gap: 10px;
+    width: calc(33.33% - 22px);
+}
+
+.counter_icon {
+    display: flex;
+    padding-top: 10px;
+    align-items: flex-start;
+}
+
+.counter_icon img {
+    width: 45px;
+}
+
+.counter_number {
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.counter_title {
+    line-height: 1.25;
+    color: var(--text-color);
+}
+
+@media (min-width:992px) and (max-width:1280px) {
+    .success_counter .success_counter_item {
+        width: calc(50% - 17px);
+    }
+}
+
+@media (max-width:1280px) {
+    .counter_icon svg {
+        width: 40px;
+    }
+
+    .success_content .counter_number {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:767px) {
+    .success_content {
+        min-width: 152px;
+    }
+}

@@ -1,0 +1,25 @@
+.list_title {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.iconlist_item {
+    display: flex;
+    ;
+    gap: 10px;
+    line-height: 1.87;
+    color: var(--text-color);
+}
+
+.above_content.children_2 {
+    display: grid;
+    grid-template-columns: calc(50% - 15px) calc(50% + 15px);
+}
+
+.above_content.children_2 .iconlist_main:last-child {
+    padding-left: 60px;
+    border-left: 1px solid #CFCFCF;
+}

@@ -1,0 +1,117 @@
+.industries_sec {
+    background-color: var(--dark-blue);
+    text-align: center;
+}
+
+.sec_sub_title {
+    font-size: 18px;
+    line-height: 1.66;
+    font-weight: 500;
+    color: var(--light-blue);
+}
+
+.industries_sec .sec_title {
+    color: #fff;
+    margin-top: 6px;
+}
+
+.industries_sec .description {
+    line-height: 30px;
+    margin-top: 12px;
+    color: #fff;
+}
+
+.industries {
+    margin: 50px 0 80px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    column-gap: 52px;
+    row-gap: 35px;
+}
+
+.industry_box {
+    width: calc(25% - 39px);
+}
+
+.industry_img {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--light-blue);
+    padding: 55px 25px;
+    height: 193px;
+}
+
+.industry_title {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.industries_sec .global_btn a {
+    background-color: #fff;
+}
+
+.industries_sec .global_btn a:hover {
+    background-color: var(--light-blue);
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+    .industries_sec .industries {
+        column-gap: 40px;
+    }
+
+    .industries .industry_box {
+        width: calc(25% - 30px);
+    }
+}
+
+@media (min-width:641px) and (max-width:1025px) {
+    .industries_sec .industries {
+        column-gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .industries .industry_box {
+        width: calc(33.33% - 20px);
+    }
+
+    .industry_box .industry_img {
+        padding: 40px 25px;
+    }
+}
+
+@media (min-width:481px) and (max-width:640px) {
+    .industries_sec .industries {
+        column-gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .industries .industry_box {
+        width: calc(50% - 20px);
+    }
+
+    .industry_box .industry_img {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width:1280px) {
+    .industry_box .industry_title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:480px) {
+    .industries .industry_box {
+        width: 100%;
+        max-width: 300px;
+        margin-inline: auto;
+    }
+
+    .industries_sec .industries {
+        margin-bottom: 50px;
+    }
+}

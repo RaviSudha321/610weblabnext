@@ -1,0 +1,140 @@
+.what_we_do_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wwd_right_col {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.wwd_left_col {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.what_we_do_content .sec_title {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.what_we_do_content .description {
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.wwd_iconboxes {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+}
+
+.wwd_iconbox {
+    width: calc(50% - 60px);
+}
+
+.wwd_iconbox_title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    border-bottom: 1px solid #CFCFCF;
+    padding: 4px 0 9px;
+}
+
+.wwd_iconbox_description {
+    margin-top: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.wwd_buttons {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.what_video_btn a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+    .wwd_left_col .wwd_iconboxes {
+        gap: 80px;
+    }
+
+    .wwd_iconboxes .wwd_iconbox {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (min-width:768px) and (max-width:1025px) {
+    .wwd_left_col .wwd_iconboxes {
+        gap: 50px;
+    }
+
+    .wwd_iconboxes .wwd_iconbox {
+        width: calc(50% - 25px);
+    }
+
+    .wwd_left_col .wwd_buttons {
+        margin-top: 50px;
+    }
+
+    .what_we_do_content .wwd_left_col {
+        padding-right: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .what_we_do_sec .what_we_do_content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .what_we_do_sec .what_we_do_content>* {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .what_we_do_sec .what_we_do_content .sec_title {
+        text-align: center;
+    }
+
+    .what_we_do_content .wwd_buttons {
+        justify-content: center;
+        margin-top: 45px;
+    }
+
+    .wwd_left_col .wwd_iconboxes {
+        gap: 50px;
+    }
+
+    .wwd_iconboxes .wwd_iconbox {
+        width: calc(50% - 25px);
+    }
+}
+
+@media (max-width:480px) {
+    .wwd_left_col .wwd_iconboxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wwd_left_col .wwd_iconboxes .wwd_iconbox {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .what_we_do_content .wwd_buttons {
+        flex-direction: column;
+    }
+}

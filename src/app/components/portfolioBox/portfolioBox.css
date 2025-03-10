@@ -1,0 +1,39 @@
+.portfolio_box {
+    padding: 16px 16px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio_img {
+    display: flex;
+}
+
+.portfolio_title {
+    margin-top: 15px;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.portfolio_img img {
+    border-radius: 5px;
+}
+
+@media (max-width:1500px) {
+    .portfolio_box .portfolio_title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:767px) {
+    body .portfolio_box .portfolio_title {
+        font-size: 20px;
+    }
+
+    .portfolios_filter .portfolio_cats li {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+}
