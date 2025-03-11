@@ -20,6 +20,10 @@
     grid-template-rows: 201px 238px 254px; */
 }
 
+.work_culture_img {
+    width: 100%;
+}
+
 /* .work_culture_img:nth-child(1) {
     grid-row-start: 1;
     grid-row-end: 4;

@@ -1,10 +1,16 @@
+"use client";
+
 import Link from 'next/link';
 import './footer.css';
 import Button from '../button/button';
 import Newsletter from '../newsletter/newsletter';
 import { FaXTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaBehance } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
+
 
 function Footer(){
+
+    const pathname = usePathname();
 
     const socialMedia = [
         {
@@ -51,21 +57,21 @@ function Footer(){
                     <div className="footer_col_two">
                         <h3 className="menu_title">Quick Links</h3>
                         <ul className="footer_menu">
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/about-us">About us</Link></li>
-                            <li><Link href="/portfolio">Portfolio</Link></li>
-                            <li><Link href="/careers">Careers</Link></li>
-                            <li><Link href="/contact-us">Contact us</Link></li>
-                            <li><Link href="/blog">Blog</Link></li>
+                            <li><Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link></li>
+                            <li><Link href="/about-us" className={pathname === "/about-us" ? "active" : ""}>About us</Link></li>
+                            <li><Link href="/portfolio" className={pathname === "/portfolio" ? "active" : ""}>Portfolio</Link></li>
+                            <li><Link href="/careers" className={pathname === "/careers" ? "active" : ""}>Careers</Link></li>
+                            <li><Link href="/contact-us" className={pathname === "/contact-us" ? "active" : ""}>Contact us</Link></li>
+                            <li><Link href="/blog" className={pathname === "/blog" ? "active" : ""}>Blog</Link></li>
                         </ul>
                     </div>
                     <div className="footer_col_three">
                         <h3 className="menu_title">IT Services</h3>
                         <ul className="footer_menu">
-                            <li><Link href="/website-development">Website Development</Link></li>
-                            <li><Link href="/wordpress-development">Wordpress Development</Link></li>
-                            <li><Link href="/shopify-development">Shopify Development</Link></li>
-                            <li><Link href="/php-development">PHP Development</Link></li>
+                            <li><Link href="/website-development" className={pathname === "/website-development" ? "active" : ""}>Website Development</Link></li>
+                            <li><Link href="/wordpress-development" className={pathname === "/wordpress-development" ? "active" : ""}>Wordpress Development</Link></li>
+                            <li><Link href="/shopify-development" className={pathname === "/shopify-development" ? "active" : ""}>Shopify Development</Link></li>
+                            <li><Link href="/php-development" className={pathname === "/php-development" ? "active" : ""}>PHP Development</Link></li>
                         </ul>
                     </div>
                     <div className="footer_col_four">

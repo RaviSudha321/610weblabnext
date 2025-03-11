@@ -66,6 +66,14 @@ section.ratings_sec {
         width: 50%;
     }
 
+    body .rating_item .rating_count {
+        font-size: 16px;
+    }
+
+    .rating_item .rating_count img {
+        width: 150px;
+    }
+
     .ratings_sec .ratings {
         transform: translateY(-65px);
         padding: 25px;
@@ -82,7 +90,7 @@ section.ratings_sec {
 
     .ratings .rating_item:nth-child(1) {
         border-bottom: 1px solid #CFCFCF;
-        padding-bottom: 30px;
+        padding-bottom: 23px;
         padding-left: 0;
     }
 

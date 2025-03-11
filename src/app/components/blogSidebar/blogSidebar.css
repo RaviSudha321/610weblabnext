@@ -33,7 +33,7 @@
     background-color: transparent;
     overflow: hidden;
     cursor: pointer;
-    background-image: url(../../../public/images/search.webp);
+    background-image: url(/images/search.webp);
     background-position: center;
     background-size: cover;
 }

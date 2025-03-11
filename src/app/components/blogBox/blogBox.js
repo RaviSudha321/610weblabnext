@@ -20,7 +20,7 @@ function BlogBox({blog}){
                             <img src="/images/arrow-right.svg" alt="arrow" style={{width:'46px'}} />
                         </div>
                     </div>
-                    <Link to={`/blog/${blog.slug}`} className='blog_link'></Link>
+                    <Link href={`/${blog.slug}`} className='blog_link'></Link>
                 </>
             }
         </div>

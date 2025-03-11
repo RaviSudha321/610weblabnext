@@ -8,10 +8,10 @@
 
 .iconlist_item {
     display: flex;
-    ;
     gap: 10px;
     line-height: 1.87;
     color: var(--text-color);
+    text-align: left;
 }
 
 .above_content.children_2 {

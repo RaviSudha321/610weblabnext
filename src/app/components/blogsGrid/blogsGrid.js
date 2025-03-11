@@ -19,7 +19,7 @@ function BlogsGrid(){
         const getAllBlogs = async()=>{
             try {
                 setIsLoading(true);
-                const response = await fetch(`${process.env.REACT_APP_REST_API_URL}/posts?_embed`);
+                const response = await fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/posts?_embed`);
                 if(!response.ok){
                     console.log('All blogs fetch issue');
                     setIsLoading(false);
@@ -41,7 +41,7 @@ function BlogsGrid(){
     const getBlogs = useCallback( async() => {
         try {
             setIsLoading(true);
-            const response = await fetch(`${process.env.REACT_APP_REST_API_URL}/posts?_embed&page=${currentPage}&per_page=${perPage}&offset=${offset}`);
+            const response = await fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=${perPage}&offset=${offset}`);
             if(!response.ok){
                 console.log('Blogs fetch issue');
                 setIsLoading(false);

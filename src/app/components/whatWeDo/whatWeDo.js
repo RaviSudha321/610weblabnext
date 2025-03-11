@@ -1,3 +1,5 @@
+'use client';
+
 import Button from '../button/button';
 import VideoPopup from '../videoPopup/videoPopup';
 import './whatWeDo.css';

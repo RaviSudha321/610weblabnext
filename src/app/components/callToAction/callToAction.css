@@ -1,6 +1,6 @@
 .cta_sec {
     padding-block: 35px;
-    background-image: url(../../../public/images/cta-bg.webp);
+    background-image: url(/images/cta-bg.webp);
     background-position: center;
     background-size: cover;
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import './workCulture.css';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 

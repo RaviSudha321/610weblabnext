@@ -70,35 +70,50 @@
     color: var(--text-color);
 }
 
-.testimonials_carousel .owl-nav {
+.testimonials_inner_sec {
+    padding-inline: 40px;
+}
+
+.testimonials_nav .swiper-button-prev,
+.testimonials_nav .swiper-button-next {
+    position: static;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #00000033;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s linear;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.testimonials_nav .swiper-button-prev:hover,
+.testimonials_nav .swiper-button-next:hover {
+    background-color: #30A9E0;
+}
+
+.testimonials_nav .swiper-button-prev:after,
+.testimonials_nav .swiper-button-next:after {
+    display: none;
+}
+
+.testimonials_nav {
     margin-top: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 5px;
 }
 
-.testimonials_carousel .owl-nav button {
-    display: inline-flex;
-    width: 50px;
-    aspect-ratio: 1;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+.testimonials_nav .swiper-button-prev svg,
+.testimonials_nav .swiper-button-next svg {
+    width: 14px;
+    color: #000;
     transition: all 0.2s linear;
-    cursor: pointer;
 }
 
-.testimonials_carousel .owl-nav button:hover {
-    background-color: var(--light-blue) !important;
-}
-
-.testimonials_carousel .owl-nav button:hover path {
-    fill: #fff;
-}
-
-.testimonials_inner_sec {
-    padding-inline: 40px;
+.testimonials_nav .swiper-button-prev:hover svg,
+.testimonials_nav .swiper-button-next:hover svg {
+    color: #fff;
 }
 
 @media (max-width:1280px) {
@@ -151,6 +166,10 @@
 @media (max-width:767px) {
     body .testimonials_sec {
         padding: 50px 0 100px !important;
+    }
+
+    .testimonials_nav {
+        justify-content: center;
     }
 
     .testimonials_sec .testimonials_inner_sec {

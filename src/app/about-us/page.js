@@ -1,10 +1,10 @@
-// import Experience from "../components/experience/experience";
-// import Mission from "../components/mission/mission";
+import Experience from "../components/experience/experience";
+import Mission from "../components/mission/mission";
 import PageBanner from "../components/pageBanner/pageBanner";
-// import Qualities from "../components/qualities/qualities";
-// import Team from "../components/team/team";
-// import Testimonials from "../components/testimonials/testimonials";
-// import WhatWeDo from "../components/whatWeDo/whatWeDo";
+import Qualities from "../components/qualities/qualities";
+import Team from "../components/team/team";
+import Testimonials from "../components/testimonials/testimonials";
+import WhatWeDo from "../components/whatWeDo/whatWeDo";
 
 export const metadata = {
     title: "About Us - Your Company Name",
@@ -17,12 +17,12 @@ function About(){
             <PageBanner 
             title="It’s always about You at 610weblab eServices!"
             />
-            {/* <WhatWeDo />
+            <WhatWeDo />
             <Mission />
             <Experience />
             <Qualities />
             <Team />
-            <Testimonials /> */}
+            <Testimonials />
         </div>
     )
 }

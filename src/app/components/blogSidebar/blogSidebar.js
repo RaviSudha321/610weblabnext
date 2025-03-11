@@ -1,17 +1,19 @@
+'use client';
+
 import './blogSidebar.css';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 function BlogSidebar({currentPost}){
     
     const [categories, setCategories] = useState([]);
     const [recentPosts, setRecentPosts] = useState([]);
     const [searchKeyword, setSearchKeyword] = useState('');
-    const navigate = useNavigate();
 
     const getCategories = useCallback(async() => {
         try {
-            const response = await fetch(process.env.REACT_APP_REST_API_URL+'/categories');
+            const response = await fetch('https://610weblab.in/610weblab/wp-json/wp/v2/categories');
             if(!response.ok){
                 console.log('categories not fetched');
                 return;
@@ -26,7 +28,7 @@ function BlogSidebar({currentPost}){
 
     const getRecentPosts = useCallback(async() => {
         try {
-            let url = `${process.env.REACT_APP_REST_API_URL}/posts?_embed`;
+            let url = `https://610weblab.in/610weblab/wp-json/wp/v2/posts?_embed`;
             if (currentPost) {
                 url += `&exclude=${currentPost}`;
             }
@@ -54,7 +56,7 @@ function BlogSidebar({currentPost}){
     
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        navigate('/search/'+searchKeyword);
+        redirect('/search/'+searchKeyword) 
     }
 
     useEffect(()=>{
@@ -83,10 +85,10 @@ function BlogSidebar({currentPost}){
                                         {
                                             category.count > 0 &&
                                                 <li className='category_list_item'>
-                                                <NavLink to={`/category/${category.slug}`}>
+                                                <Link href={`/category/${category.slug}`}>
                                                     <span className='category_name'>{category.name}</span>
                                                     <span className='category_posts_count'>({category.count})</span>
-                                                </NavLink>
+                                                </Link>
                                             </li>
                                         }
                                     </React.Fragment>
@@ -112,7 +114,7 @@ function BlogSidebar({currentPost}){
                                             : <img src="https://placehold.co/600x400?text=610+Web+Lab" alt="image" className='news_img' />
                                         }
                                         
-                                        <Link to={`/blog/${post.slug}`}><h3 className='news_title' dangerouslySetInnerHTML={{__html: post.title.rendered}}></h3></Link>
+                                        <Link href={`/blog/${post.slug}`}><h3 className='news_title' dangerouslySetInnerHTML={{__html: post.title.rendered}}></h3></Link>
                                         <span className='news_date'>
                                             <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6.47064 0.925985C6.13646 1.12989 6.06283 1.32813 6.06283 2.01349V2.6252H5.17357C4.62416 2.6252 4.13138 2.65919 3.90482 2.7045C3.03255 2.89142 2.18861 3.37852 1.54857 4.05821C0.817905 4.83985 0.444077 5.74044 0.347788 6.92989C0.211851 8.63478 0.160874 11.1213 0.189194 14.5934C0.223179 18.6432 0.319468 20.6143 0.512046 21.3166C0.942515 22.8459 2.21693 24.1033 3.7349 24.4941C4.6638 24.732 8.06224 24.851 12.6501 24.8113C16.632 24.7717 18.5521 24.6811 19.2827 24.4941C20.7951 24.0977 22.0978 22.7893 22.4943 21.2656C22.6812 20.5463 22.7718 18.6035 22.8115 14.6613C22.8398 11.1836 22.7945 8.71407 22.6529 6.95821C22.5566 5.74044 22.1884 4.85118 21.4521 4.05821C20.812 3.37852 19.9681 2.89142 19.0958 2.7045C18.8693 2.65919 18.3765 2.6252 17.8327 2.6252H16.9378V2.01349C16.9378 1.32813 16.8642 1.12989 16.53 0.925985C16.2751 0.773056 15.788 0.773056 15.5331 0.925985C15.199 1.12989 15.1253 1.32813 15.1253 2.01349V2.6252H11.5003H7.87533V2.01349C7.87533 1.50938 7.85833 1.37911 7.76205 1.22052C7.59212 0.948641 7.33724 0.812704 6.96908 0.812704C6.75951 0.812704 6.59525 0.846687 6.47064 0.925985ZM6.06283 5.04376C6.06283 5.73478 6.13646 5.93302 6.47064 6.13692C6.72552 6.28985 7.21263 6.28985 7.46751 6.13692C7.80169 5.93302 7.87533 5.73478 7.87533 5.04376V4.4377H11.5003H15.1253V5.04376C15.1253 5.55352 15.1423 5.6838 15.2386 5.84239C15.4085 6.11427 15.6634 6.2502 16.0316 6.2502C16.3997 6.2502 16.6546 6.11427 16.8245 5.84239C16.9208 5.6838 16.9378 5.55352 16.9378 5.0381V4.42071L17.7478 4.4547C18.9316 4.50001 19.5433 4.74356 20.104 5.37794C20.5742 5.91603 20.7611 6.44278 20.8177 7.42266L20.8517 8.0627H11.5003H2.14896L2.18294 7.42266C2.23958 6.44278 2.4265 5.91603 2.89662 5.37794C3.03255 5.22501 3.27044 5.0211 3.42904 4.91915C3.99544 4.55665 4.43158 4.46036 5.48509 4.44337L6.06283 4.4377V5.04376ZM20.931 10.2434C20.9933 10.7871 20.9253 17.7596 20.8517 19.1076C20.812 19.7477 20.7441 20.45 20.6988 20.6709C20.4949 21.6565 19.6566 22.4947 18.671 22.6986C17.0058 23.0498 5.99486 23.0498 4.32962 22.6986C3.34408 22.4947 2.5058 21.6565 2.30189 20.6709C2.25658 20.45 2.18861 19.759 2.14896 19.1359C2.07533 17.8219 2.00736 10.7928 2.06966 10.2434L2.10931 9.8752H11.5003H20.8913L20.931 10.2434Z" fill="#30A9E0"/>

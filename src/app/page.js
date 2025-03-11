@@ -13,7 +13,7 @@ import Services from "./components/services/services";
 import SuccessCounter from "./components/successCounter/successCounter";
 import TechnologiesTabs from "./components/technologiesTabs/technologiesTabs";
 import Testimonials from "./components/testimonials/testimonials";
-// import Trusted from "./components/trusted/trusted";
+import Trusted from "./components/trusted/trusted";
 import './page.css';
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <Ratings />
       <Recognized />
       <Services />
-      {/* <Projects /> */}
+      <Projects />
       <TechnologiesTabs />
       <Features />
       <ImageText
@@ -45,11 +45,11 @@ export default function Home() {
           content={<SuccessCounter />}
         />
       <Industries />
-      {/* <BlogsCarousel /> */}
-      {/* <Trusted /> */}
+      <BlogsCarousel />
+      <Trusted />
       <OurSteps />
       <Faqs />
-      {/* <Testimonials /> */}
+      <Testimonials />
     </div>
   );
 }

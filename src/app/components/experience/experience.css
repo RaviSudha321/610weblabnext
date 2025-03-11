@@ -37,7 +37,7 @@
     top: 6px;
     width: 16px;
     height: 12px;
-    background-image: url(../../../public/images/check.webp);
+    background-image: url(/images/check.webp);
     background-position: center;
     background-size: cover;
 }

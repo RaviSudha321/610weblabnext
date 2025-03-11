@@ -1,0 +1,25 @@
+.advantages_boxes {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+@media (max-width: 1280px) {
+    .advantages_sec .advantages_boxes {
+        grid-gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .advantages_sec .advantages_boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .advantages_sec .advantages_boxes {
+        grid-template-columns: 100%;
+    }
+}

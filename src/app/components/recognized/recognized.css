@@ -129,6 +129,16 @@ section.recognized_sec {
     }
 }
 
+@media (min-width:768px) and (max-width:1024px) {
+    .recognized_content .recognized_boxes .recognized_box {
+        padding-inline: 15px;
+    }
+
+    .recognized_content .recognized_box .recognized_title {
+        font-size: 20px;
+    }
+}
+
 @media (max-width:767px) {
     .recognized_boxes .recognized_box {
         width: calc(50% - 10px);
@@ -148,8 +158,9 @@ section.recognized_sec {
 @media (max-width:575px) {
     .recognized_boxes .recognized_box {
         width: 100%;
-        max-width: 350px;
+        padding-inline: 10px;
+        /* max-width: 350px;
         margin-inline: auto;
-        text-align: center;
+        text-align: center; */
     }
 }

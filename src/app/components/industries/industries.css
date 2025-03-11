@@ -78,9 +78,9 @@
         width: calc(33.33% - 20px);
     }
 
-    .industry_box .industry_img {
+    /* .industry_box .industry_img {
         padding: 40px 25px;
-    }
+    } */
 }
 
 @media (min-width:481px) and (max-width:640px) {

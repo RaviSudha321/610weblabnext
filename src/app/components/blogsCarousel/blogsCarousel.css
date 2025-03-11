@@ -18,26 +18,29 @@
     margin-inline: auto;
 }
 
-.blogs_carousel {
-    position: relative;
-    margin-top: 35px;
+.blogs_carousel_outer {
     padding-inline: 74px;
+    position: relative;
 }
 
-.blogs_carousel .owl-stage {
-    display: flex;
-    align-items: stretch;
-    padding-left: 2px;
+.blogs_carousel_outer .blogs_carousel {
+    position: unset;
+    margin-top: 35px;
 }
 
-.blogs_carousel .owl-nav button {
+.blogs_carousel .swiper-wrapper .swiper-slide {
+    height: auto;
+}
+
+.blogs_carousel .swiper-button-prev,
+.blogs_carousel .swiper-button-next {
     margin: 0 !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     display: inline-flex !important;
     width: 50px;
-    aspect-ratio: 1;
+    height: 50px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
@@ -46,20 +49,24 @@
     transition: all 0.2s linear;
 }
 
-.blogs_carousel .owl-nav button:hover {
+.blogs_carousel .swiper-button-prev:hover,
+.blogs_carousel .swiper-button-next:hover {
     background-color: var(--light-blue) !important;
 }
 
-.blogs_carousel .owl-nav button:hover path {
+.blogs_carousel .swiper-button-prev svg,
+.blogs_carousel .swiper-button-next svg {
+    width: 13px;
+}
+
+.blogs_carousel .swiper-button-prev:hover path,
+.blogs_carousel .swiper-button-next:hover path {
     fill: #fff;
 }
 
-.blogs_carousel .owl-nav .owl-prev {
-    left: 0;
-}
-
-.blogs_carousel .owl-nav .owl-next {
-    right: 0;
+.blogs_carousel .swiper-button-prev:after,
+.blogs_carousel .swiper-button-next:after {
+    display: none;
 }
 
 .error_message {
@@ -68,10 +75,33 @@
     margin-top: 20px;
 }
 
-@media (min-width:641px) and (max-width:991px) {
-    .blogs_sec .blogs_carousel {
-        padding: 64px;
+
+@media (max-width:1199px) {
+    body .blogs_carousel_outer {
+        padding-inline: 0;
     }
+
+    body .blogs_carousel .swiper-button-prev,
+    body .blogs_carousel .swiper-button-next {
+        position: static;
+        transform: none;
+        margin-top: 45px !important;
+    }
+
+    body .blogs_carousel .swiper-button-prev {
+        margin-right: 10px !important;
+    }
+
+    body .blogs_carousel .swiper-button-next {
+        margin-left: 10px !important;
+    }
+
+    .blogs_carousel {
+        text-align: center;
+    }
+}
+
+@media (min-width:641px) and (max-width:991px) {
 
     body .blogs_carousel .owl-nav button {
         width: 44px;
@@ -100,10 +130,5 @@
 
     .blogs_carousel .owl-nav {
         margin-top: 40px !important;
-    }
-
-    .blogs_carousel {
-        max-width: 400px;
-        margin-inline: auto;
     }
 }

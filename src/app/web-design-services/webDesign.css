@@ -1,0 +1,153 @@
+.web_design_page .portfolio_boxes {
+    margin-bottom: 50px;
+}
+
+.web_design_page .portfolio_content .global_btn {
+    text-align: center;
+}
+
+.web_services_sec .sec_title {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.web_services_sec .description {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.web_service_boxes {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+}
+
+.web_services_sec {
+    padding-bottom: 0;
+}
+
+.web_design_page .portfolio_boxes {
+    margin-top: 50px;
+}
+
+.portfolio_boxes {
+    grid-gap: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 65px;
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+    .web_design_page .image_text_left_col .above_content.children_2 {
+        grid-template-columns: 100%;
+    }
+
+    .web_design_page .image_text_left_col .above_content.children_2 .iconlist_main:last-child {
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-left: 0;
+        border-top: 1px solid #CFCFCF;
+        width: fit-content;
+    }
+
+    .web_services_sec .web_service_boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1024px) {
+    .portfolio_content .portfolio_boxes {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+
+    .web_design_page .image_text_left_col {
+        padding: 0;
+        width: 100%;
+    }
+
+    .web_design_page .image_text_right_col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .web_design_page .image_text_content {
+        flex-direction: column-reverse;
+    }
+
+    .web_design_page .image_text_sec .description,
+    .web_design_page .image_text_sec .sec_title {
+        text-align: center;
+    }
+
+    .web_design_page .image_text_content .buttons {
+        justify-content: center;
+    }
+
+    .web_design_page .above_content.children_2 {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    .image_text_content.image_left .image_text_left_col,
+    .image_text_content.image_left .image_text_right_col {
+        padding: 0;
+    }
+
+    .image_text_content.image_left .iconlist_main {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+    .web_services_sec .web_service_boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:767px) {
+    .web_service_boxes .icon_box {
+        padding: 30px 25px 40px;
+    }
+
+    .iconbox_content .iconbox_title {
+        font-size: 22px;
+    }
+
+    body .web_design_page .portfolio_boxes {
+        margin-top: 40px;
+    }
+
+    body .web_design_page .portfolio_boxes {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:640px) {
+    .web_design_page .image_text_left_col .above_content.children_2 {
+        grid-template-columns: 100%;
+    }
+
+    .web_design_page .image_text_left_col .above_content.children_2 .iconlist_main:last-child {
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-left: 0;
+        border-top: 1px solid #CFCFCF;
+        width: fit-content;
+    }
+
+    .web_design_page .iconlist_main {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+    .web_services_sec .web_service_boxes {
+        grid-template-columns: 100%;
+    }
+
+    .portfolios_sec .portfolio_content .portfolio_boxes {
+        grid-template-columns: 100%;
+    }
+}

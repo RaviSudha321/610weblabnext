@@ -297,9 +297,9 @@
         filter: brightness(0) invert(1);
     }
 
-    .header_content .header_menu ul li a path {
+    /* .header_content .header_menu ul li a path {
         fill: #fff;
-    }
+    } */
 
     body .header_menu li.has_sub_menu a+.sub_menu,
     body .header_menu li.has_sub_menu .sub_menu {
@@ -329,6 +329,9 @@
         background-color: transparent;
         border: 0;
         padding-left: 40px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
     }
 
     .header_content .global_btn a {

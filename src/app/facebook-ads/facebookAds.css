@@ -1,0 +1,18 @@
+.iconboxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width:1280px) {
+    body .iconboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:640px) {
+
+    body .iconboxes {
+        grid-template-columns: 100%;
+    }
+}

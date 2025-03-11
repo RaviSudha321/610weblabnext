@@ -11,23 +11,28 @@
     color: #fff;
 }
 
-.projects_carousel {
-    margin: 90px 0 40px;
+.projects_sec .projects_carousel_outer {
+    padding-inline: 74px;
     position: relative;
+}
+
+.projects_sec .projects_carousel {
+    margin: 50px 0 40px;
+    position: unset;
     display: flex;
     align-items: stretch;
     gap: 27px;
     flex-wrap: wrap;
-    padding-inline: 74px;
+    padding-block: 40px;
 }
 
 .projects_carousel:before {
     content: '';
     position: absolute;
     left: 120px;
-    top: -40px;
+    top: 0;
     width: calc(100% - 240px);
-    height: calc(100% + 80px);
+    height: 100%;
     background-color: var(--light-blue);
     border-radius: 10px;
 }
@@ -41,21 +46,21 @@
 }
 
 .projects_sec .projects_action {
-    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
-.projects_carousel .owl-nav button {
+.projects_carousel .swiper-button-prev,
+.projects_carousel .swiper-button-next {
     margin: 0 !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     display: inline-flex !important;
     width: 50px;
-    aspect-ratio: 1;
+    height: 50px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
@@ -64,12 +69,25 @@
     transition: all 0.2s linear;
 }
 
-.projects_carousel .owl-nav button:hover {
+.projects_carousel .swiper-button-prev:hover,
+.projects_carousel .swiper-button-next:hover {
     background-color: var(--light-blue) !important;
 }
 
-.projects_carousel .owl-nav button:hover path {
-    fill: #fff;
+.projects_carousel .swiper-button-prev:after,
+.projects_carousel .swiper-button-next:after {
+    display: none;
+}
+
+.projects_carousel .swiper-button-prev svg,
+.projects_carousel .swiper-button-next svg {
+    width: 24px;
+    color: #000;
+}
+
+.projects_carousel .swiper-button-prev:hover svg,
+.projects_carousel .swiper-button-next:hover svg {
+    color: #fff;
 }
 
 .projects_carousel .owl-nav .owl-prev {
@@ -82,8 +100,7 @@
 
 @media (max-width:640px) {
     .projects_sec .projects_carousel {
-        padding: 0;
-        margin-top: 70px;
+        padding-block: 30px;
     }
 
     body .projects_carousel .owl-nav button {
@@ -96,21 +113,17 @@
         margin-top: 60px !important;
     }
 
-    .projects_carousel {
+    /* .projects_carousel {
         max-width: 400px;
         margin-inline: auto;
-    }
+    } */
 
-    .projects_sec .projects_carousel:before {
+    /* .projects_sec .projects_carousel:before {
         height: calc(100% - 50px);
         top: -30px;
         width: calc(100% - 80px);
         left: 40px;
-    }
-
-    .projects_sec .projects_action {
-        margin-top: 50px;
-    }
+    } */
 }
 
 @media (max-width:480px) {
@@ -121,5 +134,36 @@
 
     .projects_action .global_btn a {
         min-width: 200px;
+    }
+
+    body .projects_sec .projects_carousel_outer {
+        padding-inline: 0;
+    }
+
+    .projects_sec .projects_carousel:before {
+        width: calc(100% - 100px);
+        left: 50px;
+    }
+
+    .projects_sec .projects_carousel .swiper-button-prev {
+        bottom: 0;
+        top: calc(100% + 30px);
+        transform: none;
+        left: calc(50% - 60px);
+    }
+
+    .project_item {
+        padding-inline: 5px;
+    }
+
+    .projects_sec .projects_carousel .swiper-button-next {
+        bottom: 0;
+        top: calc(100% + 30px);
+        transform: none;
+        right: calc(50% - 60px);
+    }
+
+    body .projects_sec .projects_carousel {
+        margin-bottom: 115px;
     }
 }

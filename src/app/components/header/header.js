@@ -67,10 +67,10 @@ function Header(){
                                 <nav className="navigation">
                                     <ul className='menu'>
                                         <li>
-                                            <Link href="/">Home</Link>
+                                            <Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link>
                                         </li>
                                         <li>
-                                            <Link href="/web-design-services">Web Design</Link>
+                                            <Link href="/web-design-services" className={pathname === "/web-design-services" ? "active" : ""}>Web Design</Link>
                                         </li>
                                         {
                                             windowWidth > 1024 ?
@@ -85,29 +85,29 @@ function Header(){
                                                     <li>
                                                         <ul>
                                                             <li>
-                                                                <Link href="/php-development"><MdKeyboardDoubleArrowRight /> PHP Development</Link>
+                                                                <Link href="/php-development" className={pathname === "/php-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> PHP Development</Link>
                                                             </li>
                                                             <li>
-                                                                <Link href="/shopify-development"><MdKeyboardDoubleArrowRight /> Shopify Development</Link>
+                                                                <Link href="/shopify-development" className={pathname === "/shopify-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Shopify Development</Link>
                                                             </li>
                                                             <li>
-                                                                <Link href="/open-source-development"><MdKeyboardDoubleArrowRight /> Open Source Development</Link>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Link href="/responsive-website-design-and-development"><MdKeyboardDoubleArrowRight /> Responsive Websites Design & Development</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link href="/wordpress-development"><MdKeyboardDoubleArrowRight /> WordPress Development</Link>
+                                                                <Link href="/open-source-development" className={pathname === "/open-source-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Open Source Development</Link>
                                                             </li>
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <Link href="/web-development"><MdKeyboardDoubleArrowRight /> Web Development</Link>
+                                                                <Link href="/responsive-website-design-and-development" className={pathname === "/responsive-website-design-and-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Responsive Websites Design & Development</Link>
                                                             </li>
                                                             <li>
-                                                                <Link href="/custom-software-development"><MdKeyboardDoubleArrowRight /> Custom Software Development</Link>
+                                                                <Link href="/wordpress-development" className={pathname === "/wordpress-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> WordPress Development</Link>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <Link href="/web-development" className={pathname === "/web-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Web Development</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link href="/custom-software-development" className={pathname === "/custom-software-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Custom Software Development</Link>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -122,25 +122,25 @@ function Header(){
                                                 </Link>
                                                 <ul className="sub_menu">                                                
                                                     <li>
-                                                        <Link href="/php-development"><MdKeyboardDoubleArrowRight /> PHP Development</Link>
+                                                        <Link href="/php-development" className={pathname === "/php-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> PHP Development</Link>
                                                     </li>
                                                     <li>    
-                                                        <Link href="/shopify-development"><MdKeyboardDoubleArrowRight /> Shopify Development</Link>
+                                                        <Link href="/shopify-development" className={pathname === "/shopify-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Shopify Development</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/open-source-development"><MdKeyboardDoubleArrowRight /> Open Source Development</Link>
+                                                        <Link href="/open-source-development" className={pathname === "/open-source-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Open Source Development</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/responsive-website-design-and-development"><MdKeyboardDoubleArrowRight /> Responsive Websites Design & Development</Link>
+                                                        <Link href="/responsive-website-design-and-development" className={pathname === "/responsive-website-design-and-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Responsive Websites Design & Development</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/wordpress-development"><MdKeyboardDoubleArrowRight /> WordPress Development</Link>
+                                                        <Link href="/wordpress-development" className={pathname === "/wordpress-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> WordPress Development</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/web-development"><MdKeyboardDoubleArrowRight /> Web Development</Link>
+                                                        <Link href="/web-development" className={pathname === "/web-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Web Development</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/custom-software-development"><MdKeyboardDoubleArrowRight /> Custom Software Development</Link>
+                                                        <Link href="/custom-software-development" className={pathname === "/custom-software-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Custom Software Development</Link>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -158,23 +158,23 @@ function Header(){
                                                     <li>
                                                         <ul>
                                                             <li>
-                                                                <Link href="/digital-marketing-services"><MdKeyboardDoubleArrowRight /> Digital Marketing</Link>
+                                                                <Link href="/digital-marketing-services" className={pathname === "/digital-marketing-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Digital Marketing</Link>
                                                             </li>
                                                             <li>
-                                                                <Link href="/social-media-marketing"><MdKeyboardDoubleArrowRight /> Social Media Marketing</Link>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Link href="/seo-services"><MdKeyboardDoubleArrowRight /> SEO Services</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link href="/facebook-ads"><MdKeyboardDoubleArrowRight /> Facebook Ads</Link>
+                                                                <Link href="/social-media-marketing" className={pathname === "/social-media-marketing" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Social Media Marketing</Link>
                                                             </li>
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <Link href="/ppc-services"><MdKeyboardDoubleArrowRight /> PPC</Link>
+                                                                <Link href="/seo-services" className={pathname === "/seo-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> SEO Services</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link href="/facebook-ads" className={pathname === "/facebook-ads" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Facebook Ads</Link>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <Link href="/ppc-services" className={pathname === "/ppc-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> PPC</Link>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -189,28 +189,28 @@ function Header(){
                                                 </Link>
                                                 <ul className="sub_menu">                                                
                                                     <li>
-                                                        <Link href="/digital-marketing-services"><MdKeyboardDoubleArrowRight /> Digital Marketing</Link>
+                                                        <Link href="/digital-marketing-services" className={pathname === "/digital-marketing-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Digital Marketing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/seo-services"><MdKeyboardDoubleArrowRight /> SEO Services</Link>
+                                                        <Link href="/seo-services" className={pathname === "/seo-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> SEO Services</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/ppc-services"><MdKeyboardDoubleArrowRight /> PPC</Link>
+                                                        <Link href="/ppc-services" className={pathname === "/ppc-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> PPC</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/social-media-marketing"><MdKeyboardDoubleArrowRight /> Social Media Marketing</Link>
+                                                        <Link href="/social-media-marketing" className={pathname === "/social-media-marketing" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Social Media Marketing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/facebook-ads"><MdKeyboardDoubleArrowRight /> Facebook Ads</Link>
+                                                        <Link href="/facebook-ads" className={pathname === "/facebook-ads" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Facebook Ads</Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                         }
                                         <li>
-                                            <Link href="/about-us">About Us</Link>
+                                            <Link href="/about-us" className={pathname === "about-us" ? "active" : ""}>About Us</Link>
                                         </li>
                                         <li>
-                                            <Link href="/portfolio">Portfolio</Link>
+                                            <Link href="/portfolio" className={pathname === "/portfolio" ? "active" : ""}>Portfolio</Link>
                                         </li>
                                     </ul>
                                 </nav>

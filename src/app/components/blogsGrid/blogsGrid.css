@@ -46,6 +46,7 @@
     border-color: var(--light-blue);
 }
 
+
 @media (min-width:641px) and (max-width:1024px) {
     .blogs_grid_content .blogs_grid {
         grid-template-columns: repeat(2, 1fr);

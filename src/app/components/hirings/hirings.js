@@ -1,6 +1,8 @@
-import { useEffect, useState, useCallback } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 import './hirings.css';
-import Loading from '../Loading/Loading';
+import Loading from '../loading/loading';
 import HiringItem from '../hiringItem/hiringItem';
 
 
@@ -15,8 +17,8 @@ function Hirings(){
         const fetchData = async () => {
             try {
                 const [hiringsResponse, categoriesResponse] = await Promise.all([
-                    fetch(`${process.env.REACT_APP_REST_API_URL}/weblab-hiring?_embed`),
-                    fetch(`${process.env.REACT_APP_REST_API_URL}/hiring-categories`)
+                    fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/weblab-hiring?_embed`),
+                    fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/hiring-categories`)
                 ]);
 
                 if (!hiringsResponse.ok || !categoriesResponse.ok) {

@@ -1,0 +1,11 @@
+@media (max-width: 1024px) {
+    .seo_services_page .tech_tag_sec {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .seo_services_page .tech_tag_sec {
+        padding-bottom: 50px;
+    }
+}

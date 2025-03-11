@@ -11,7 +11,7 @@ function Team(){
 
     const getTeam = async() => {
         try {
-            const response = await fetch(process.env.REACT_APP_REST_API_URL+'/weblab-team?_embed&order=asc');
+            const response = await fetch('https://610weblab.in/610weblab/wp-json/wp/v2/weblab-team?_embed&order=asc');
             if(!response.ok){
                 console.log('team data not fetched');
                 return;

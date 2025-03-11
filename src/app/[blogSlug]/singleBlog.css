@@ -1,0 +1,246 @@
+.single_blog_page .banner_title {
+    max-width: 760px;
+}
+
+.blog_details_inner {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.blog_summary {
+    width: 61%;
+    padding-right: 65px;
+}
+
+.blog_sidebar {
+    width: 39%;
+}
+
+.blog_summary .blog_title {
+    font-size: 35px;
+    text-align: left;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+.blog_meta {
+    margin-top: 20px;
+}
+
+.blog_meta .meta_items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 8px;
+}
+
+.blog_meta .meta_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.meta_item .meta_icon {
+    display: flex;
+}
+
+.blog_meta .meta_item .author_img {
+    border-radius: 50%;
+    max-width: 34px;
+}
+
+.meta_item .meta_title {
+    text-transform: capitalize;
+}
+
+.blog_description {
+    margin-top: 40px;
+    border-top: 1px solid #CFCFCF;
+    padding-top: 30px;
+}
+
+.blog_description a {
+    color: var(--light-blue);
+}
+
+.blog_description a:hover {
+    color: var(--dark-blue);
+}
+
+.blog_description table {
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.blog_description table td {
+    padding: 15px;
+}
+
+.blog_description table td:not(:last-child) {
+    border-right: 1px solid #000;
+}
+
+.blog_description table tr:not(:last-child) td {
+    border-bottom: 1px solid #000;
+}
+
+.blog_description p {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.blog_description h3 {
+    font-size: 23px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 25px 0 20px;
+}
+
+.blog_comments_sec {
+    margin-top: 25px;
+}
+
+.comment_area_title {
+    font-size: 23px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.comment_area_desc {
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.comment_form_outer {
+    margin-top: 30px;
+}
+
+.comment_form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+.comment_form .field_group {
+    width: 100%;
+    margin: 0;
+}
+
+.comment_form .name_field,
+.comment_form .email_field {
+    width: calc(50% - 8px);
+}
+
+.comment_form input:not([type="submit"], [type="checkbox"]),
+.comment_form textarea {
+    line-height: 1.5;
+    color: var(--text-color);
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 16px 20px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+.comment_form .terms_field {
+    display: flex;
+    gap: 10px;
+}
+
+.comment_form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+}
+
+.comment_form label {
+    color: var(--text-color);
+}
+
+.comment_form .submit_btn {
+    margin-top: 15px;
+}
+
+.comment_form input[type="submit"] {
+    line-height: 1.5;
+    color: var(--light-blue);
+    background-color: transparent;
+    border: 1px solid var(--light-blue);
+    padding: 16px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    font-size: 16px;
+}
+
+.comment_form input[type="submit"]:hover {
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+@media (max-width:1024px) {
+    .blog_details_inner .blog_summary {
+        width: 100%;
+        padding: 0;
+    }
+
+    .blog_details_inner .blog_sidebar {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .blog_details_inner .blog_summary .blog_title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    body .blog_details_inner .blog_summary .blog_title {
+        font-size: 25px;
+    }
+
+    .blog_summary .blog_description h3 {
+        font-size: 20px;
+    }
+
+    .blog_comments_sec .comment_form .name_field,
+    .blog_comments_sec .comment_form .email_field {
+        width: 100%;
+    }
+
+    .blog_comments_sec .comment_form input[type="submit"] {
+        padding: 14px 20px;
+    }
+
+    .recent_news_list .recent_news_item .news_img {
+        width: 120px;
+    }
+
+    .recent_news_list .recent_news_item {
+        padding-left: 135px;
+    }
+
+    .recent_news_list .recent_news_item .news_title {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .recent_news_list .recent_news_item .news_date {
+        font-size: 14px;
+    }
+
+    .recent_news_item .news_date svg {
+        width: 20px;
+    }
+}

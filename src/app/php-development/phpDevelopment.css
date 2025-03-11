@@ -1,0 +1,117 @@
+.php_development_page .portfolio_boxes {
+    margin-bottom: 50px;
+}
+
+.php_development_page .portfolio_content .global_btn {
+    text-align: center;
+}
+
+.php_development_page .image_text_sec {
+    padding-block: 0 !important;
+}
+
+.php_development_page .portfolio_boxes {
+    margin-top: 50px;
+}
+
+.portfolio_boxes {
+    grid-gap: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 65px;
+}
+
+
+@media (min-width:1025px) and (max-width:1280px) {
+    .php_development_page .image_text_left_col .above_content.children_2 {
+        grid-template-columns: 100%;
+    }
+
+    .php_development_page .image_text_left_col .above_content.children_2 .iconlist_main:last-child {
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-left: 0;
+        border-top: 1px solid #CFCFCF;
+        width: fit-content;
+    }
+}
+
+@media (max-width:1024px) {
+    .portfolio_content .portfolio_boxes {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+
+    .php_development_page .tech_tag_sec {
+        padding-bottom: 50px;
+    }
+
+    .image_text_sec .image_text_content .image_area {
+        text-align: center;
+    }
+
+    .php_development_page .image_text_left_col {
+        padding: 0;
+        width: 100%;
+    }
+
+    .php_development_page .image_text_right_col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .php_development_page .image_text_content {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .php_development_page .image_text_sec .description,
+    .php_development_page .image_text_sec .sec_title {
+        text-align: center;
+    }
+
+    .php_development_page .image_text_content .buttons {
+        justify-content: center;
+    }
+
+    .php_development_page .above_content.children_2 {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    .image_text_content.image_left .image_text_left_col,
+    .image_text_content.image_left .image_text_right_col {
+        padding: 0;
+    }
+
+    .image_text_content.image_left .iconlist_main {
+        width: fit-content;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width:767px) {
+    body .php_development_pageg_page .portfolio_boxes {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:640px) {
+    .php_development_page .image_text_left_col .above_content.children_2 {
+        grid-template-columns: 100%;
+    }
+
+    .php_development_page .image_text_left_col .above_content.children_2 .iconlist_main:last-child {
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-left: 0;
+        border-top: 1px solid #CFCFCF;
+        width: fit-content;
+    }
+
+    .portfolios_sec .portfolio_content .portfolio_boxes {
+        grid-template-columns: 100%;
+    }
+}
