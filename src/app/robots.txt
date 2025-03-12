@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow:
+
+Sitemap: http://localhost:3000/sitemap.xml
