@@ -7,12 +7,13 @@ import Testimonials from '../components/testimonials/testimonials';
 import BlogSidebar from '../components/blogSidebar/blogSidebar';
 import { useEffect, useState } from 'react';
 import Loading from '../components/loading/loading';
+import BlogCommentForm from '../components/blogCommentForm/blogCommentForm';
 import { useParams } from 'next/navigation';
+  
 
 function SingleBlog(){
 
     const {blogSlug} = useParams();
-    console.log(blogSlug)
     const [post, setPost] = useState([]);
     const [loading, setLoading] = useState(false);
     const commentCount = '';
@@ -100,30 +101,8 @@ function SingleBlog(){
                                     post.content &&
                                     <div className='blog_description' dangerouslySetInnerHTML={{__html:post.content.rendered}}></div>
                                 }
-                                <div className='blog_comments_sec'>
-                                    <h2 className='comment_area_title'>Leave a Message</h2>
-                                    <p className='comment_area_desc'>Have any question? Ready to talk to us!</p>
-                                    <div className='comment_form_outer'>
-                                        <form id="comment_form" className='comment_form'>
-                                            <p className='field_group name_field'>
-                                                <input type='text' name="fullname" id="fullname" placeholder='Full Name' required />
-                                            </p>
-                                            <p className='field_group email_field'>
-                                                <input type='email' name="email_address" id="email_address" placeholder='Email Address' required />
-                                            </p>
-                                            <p className='field_group comment_field'>
-                                                <textarea name="comment" id="comment" placeholder='Write Message' rows="4"></textarea>
-                                            </p>
-                                            <p className='field_group terms_field'>
-                                                <input type="checkbox" name="terms_conditions" id="terms_conditions" required />
-                                                <label>I Agree with the trams & conditions</label>
-                                            </p>
-                                            <p className='field_group submit_btn'>
-                                                <input type="submit" name="submit_comment" id="submit_comment" value="Send Comment" />
-                                            </p>
-                                        </form>
-                                    </div>
-                                </div>
+
+                                <BlogCommentForm postId={post.id} />
                             </div>
                             <BlogSidebar currentPost={post.id} />
                         </div>
