@@ -37,10 +37,14 @@
 
 #newsletter_form {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     max-width: 517px;
     margin-left: auto;
+}
+
+#newsletter_form .field_error {
+    color: #fff;
 }
 
 #newsletter_form .email_field {
@@ -58,6 +62,10 @@
     height: 50px;
     padding: 13px 15px;
     outline: none;
+}
+
+#newsletter_form input[type="email"].has_error {
+    border-color: #f00;
 }
 
 #newsletter-submit {

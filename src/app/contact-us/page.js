@@ -25,7 +25,7 @@ function Contact(){
         const pageUrl = window.location.href;
 
         try {
-            const response = await fetch("https://610weblab.in/610weblab/wp-json/custom-forms/v1/submit-form", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_FORM_URL}submit-form`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json; charset=UTF-8",

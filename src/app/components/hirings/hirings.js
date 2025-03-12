@@ -17,8 +17,8 @@ function Hirings(){
         const fetchData = async () => {
             try {
                 const [hiringsResponse, categoriesResponse] = await Promise.all([
-                    fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/weblab-hiring?_embed`),
-                    fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/hiring-categories`)
+                    fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-hiring?_embed`),
+                    fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/hiring-categories`)
                 ]);
 
                 if (!hiringsResponse.ok || !categoriesResponse.ok) {

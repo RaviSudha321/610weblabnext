@@ -19,7 +19,7 @@ function Category(){
         const fetchCategory = async () => {
             try{
                 setLoading(true);
-                const response = await fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/categories?slug=${categorySlug}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/categories?slug=${categorySlug}`);
                 if(!response.ok){
                     console.log('category not fetched');
                     return;
@@ -41,7 +41,7 @@ function Category(){
         const fetchCategoryPosts = async () => {
             try{
                 setLoading(true);
-                const response = await fetch(`https://610weblab.in/610weblab/wp-json/wp/v2/posts?categories=${category.id}&_embed`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/posts?categories=${category.id}&_embed`);
                 if(!response.ok){
                     console.log('category posts not fetched');
                     return;

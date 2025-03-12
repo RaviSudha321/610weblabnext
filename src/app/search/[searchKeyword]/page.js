@@ -20,7 +20,7 @@ function Search(){
             if (!searchKeyword) return;
             try {
                 setLoading(true);
-                const response = await fetch('https://610weblab.in/610weblab/wp-json/wp/v2/posts?search='+searchKeyword+'&_embed');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/posts?search=searchKeyword&_embed`);
                 if(!response.ok){
                     console.log('search api not working');
                     return;

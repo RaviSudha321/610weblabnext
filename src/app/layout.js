@@ -6,6 +6,8 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Loader from "./components/loader/loader";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import Copyright from "./components/copyright/copyright";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -34,6 +36,11 @@ export default function RootLayout({ children }) {
             </div>
           </Suspense>
           <Footer />
+          <Copyright />
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+          />
         </div>
       </body>
     </html>

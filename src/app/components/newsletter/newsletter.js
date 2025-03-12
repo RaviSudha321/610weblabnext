@@ -3,47 +3,43 @@
 import { useState } from 'react';
 import './newsletter.css';
 import { toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
 
 
 function Newsletter(){
 
-    const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const {register, handleSubmit, reset, formState: { errors },} = useForm();
+    
+    const onSubmit = async (data) => {
         setIsLoading(true);
 
+        const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+
         try {
-            const response = await fetch('https://shopifyaid.com/wp-json/custom-forms/v1/submit-newsletter-form', {
+            const response = await fetch(process.env.NEXT_PUBLIC_WP_REST_API_FORM_URL+'submit-newsletter', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=UTF-8',
                 },
-                body: JSON.stringify({
-                    "email": email,
-                })
+                body: JSON.stringify({...data, page_url: pageUrl}),
             });
       
             if (!response.ok) {
-                const data = await response.json();
-                toast.error(data.message,{
-                    theme: "colored",
-                })
                 throw new Error('Network response was not ok');
             }
             
-            const data = await response.json();
-            toast.success(data.message,{
+            const result = await response.json();
+            toast.success(result,{
                 theme: "colored",
             })
-            setEmail('');
             
         } catch (error) {
-            console.error('Error submitting form:', error);
+            toast.error(error.message,{theme: "colored",})
             
         } finally {
             setIsLoading(false);
+            reset();
         }
     }
 
@@ -56,9 +52,9 @@ function Newsletter(){
                         <p className='description'>To get more every updates</p>
                     </div>
                     <div className='newsletter_form'>
-                        <form id="newsletter_form" method='post' action="/" onSubmit={handleSubmit}>
+                        <form id="newsletter_form" onSubmit={handleSubmit(onSubmit)}>
                             <p className='email_field'>
-                                <input type='email' name="email-address" id="email-address" placeholder='Enter Email Address' required value={email} onChange={(e)=>setEmail(e.target.value)} />
+                                <input type='email' id="email" placeholder='Enter Email Address' className={errors.email ? 'has_error' : null} {...register("email", { required: "Email address is required" })} />
                             </p>
                             <p className='submit_field'>
                                 <button type="submit" name="newsletter-submit" id="newsletter-submit">
@@ -68,6 +64,7 @@ function Newsletter(){
                                     }
                                 </button>
                             </p>
+                            {errors.email && <span className="field_error">{errors.email.message}</span>}
                         </form>
                     </div>
                 </div>
