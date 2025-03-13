@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import './blogCommentForm.css';
 import { toast } from "react-toastify";
+import './blogCommentForm.css';
 
 function BlogCommentForm({postId}){
 
@@ -38,14 +38,14 @@ function BlogCommentForm({postId}){
         
             toast.success("Comment submitted! It will appear after moderation.",{
                 theme: "colored",
-            })
+            });
+            reset();
+            setAgreed(false);
 
         } catch (error) {
             toast.error(error.message,{theme: "colored",})
         } finally {
             setIsLoading(false);
-            reset();
-            setAgreed(false);
         }
     }
 

@@ -1,11 +1,16 @@
+'use client';
+
 import { useEffect, useState } from "react";
 import parse from "html-react-parser";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
+
 
 const SEO = ({ url }) => {
   const [seoData, setSeoData] = useState([]);
   const [metaData, setMetaData] = useState(null);
-  const [seoScript, setSeoScript] = useState('');
+  // const [seoScript, setSeoScript] = useState('');
+
+  if (!url) return null;
 
   useEffect(() => {
     const fetchSEOData = async () => {
@@ -27,22 +32,22 @@ const SEO = ({ url }) => {
 
     setMetaData(doc.querySelector('head').innerHTML);
 
-    const scriptTag = doc.querySelector('script[type="application/ld+json"]');
-    if (scriptTag) {
-      setSeoScript(scriptTag.innerHTML);
-    }
+    // const scriptTag = doc.querySelector('script[type="application/ld+json"]');
+    // if (scriptTag) {
+    //   setSeoScript(scriptTag.innerHTML);
+    // }
   },[seoData])
 
   if (!metaData) return null;
   
   return (
     <>
-      <Helmet>
+    <Head>
         {parse(metaData)}
-        <script type="application/ld+json" class="rank-math-schema" dangerouslySetInnerHTML={{ __html: seoScript }} />
-      </Helmet>
+        {/* <script type="application/ld+json" className="rank-math-schema" dangerouslySetInnerHTML={{ __html: seoScript }} /> */}
+      </Head>
     </>
   );
-};
+}
 
 export default SEO;

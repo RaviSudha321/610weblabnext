@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cheerio": "^1.0.0",
+    "html-react-parser": "^5.2.2",
     "jquery": "^3.7.1",
     "next": "15.2.1",
     "prop-types": "^15.8.1",

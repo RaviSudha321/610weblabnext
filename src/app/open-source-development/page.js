@@ -1,37 +1,29 @@
-'use client';
-
 import './openSourceDevelopment.css';
 import Button from '../components/button/button';
 import CallToAction from '../components/callToAction/callToAction';
 import PageBanner from '../components/pageBanner/pageBanner';
-import PortfolioBox from '../components/portfolioBox/portfolioBox';
 import TechTag from '../components/techTag/techTag';
 import Testimonials from '../components/testimonials/testimonials';
 import ImageText from '../components/imageText/imageText';
 import FullwidthImage from '../components/fullwidthImage/fullwidthImage';
-import { useEffect, useState } from 'react';
+import PortfoliosGrid from '../components/portfoliosGrid/portfoliosGrid';
+import { fetchMetadata } from '../lib/fetchMetadata';
+
+
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/open-source-development/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+  };
+}
 
 function OpenSourceDevelopment(){
-
-    const [portfolios, setPortfolios] = useState([]);
-
-    const getPortfolios = async()=>{
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-projects?order=asc&_embed`);
-            if(!response.ok){
-                throw new Error('Network response was not ok: portfolios');
-            }
-            const data = await response.json();
-            setPortfolios(data);
-        }
-        catch (error){
-            console.log('portfolios error:', error)
-        }
-    }
-
-    useEffect(()=>{
-        getPortfolios();
-    },[]);
 
     const techDescription = [
         "610 WebLab – A leading organization providing expert open-source development solutions worldwide. A 610 WebLab of the best teams of certified and talented developers having expertise with the latest open source technologies like PHP, Drupal, Magento, and WordPress."
@@ -132,35 +124,7 @@ function OpenSourceDevelopment(){
                 />
             }
             />
-
-            {
-                portfolios.length > 0 &&
-                <section className="portfolios_sec">
-                    <div className="container">
-                        <div className="portfolio_content">
-                            <h2 className="sec_title">Web Portfolio</h2>
-                            <div className="portfolio_boxes">
-                                {
-                                    portfolios.map((item, index)=>{
-                                        return(
-                                            <PortfolioBox
-                                            title={item.title.rendered}
-                                            imageUrl={item._embedded['wp:featuredmedia']['0'].source_url}
-                                            key={index}
-                                            /> 
-                                        )
-                                    })
-                                }
-                            </div>
-                            <Button 
-                            title="View Portfolio"
-                            link="/portfolio"
-                            />
-                        </div>
-                    </div>
-                </section>
-            }
-
+            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>

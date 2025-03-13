@@ -31,13 +31,6 @@
     margin-top: 50px;
 }
 
-.portfolio_boxes {
-    grid-gap: 26px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 65px;
-}
-
 @media (min-width:1025px) and (max-width:1280px) {
     .web_development_page .image_text_left_col .above_content.children_2 {
         grid-template-columns: 100%;
@@ -58,10 +51,6 @@
 }
 
 @media (max-width:1024px) {
-    .portfolio_content .portfolio_boxes {
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 50px;
-    }
 
     .web_development_page .image_text_left_col {
         padding: 0;

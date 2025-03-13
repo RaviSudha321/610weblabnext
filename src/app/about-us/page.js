@@ -5,11 +5,20 @@ import Qualities from "../components/qualities/qualities";
 import Team from "../components/team/team";
 import Testimonials from "../components/testimonials/testimonials";
 import WhatWeDo from "../components/whatWeDo/whatWeDo";
+import { fetchMetadata } from "../lib/fetchMetadata";
 
-export const metadata = {
-    title: "About Us - Your Company Name",
-    description: "Learn more about our company, mission, and team. We provide top-notch services.",
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/about-us/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
   };
+}
 
 function About(){
     return(

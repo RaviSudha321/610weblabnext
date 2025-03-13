@@ -1,37 +1,29 @@
-'use client';
-
 import './webDevelopment.css';
 import Button from '../components/button/button';
 import CallToAction from '../components/callToAction/callToAction';
 import PageBanner from '../components/pageBanner/pageBanner';
-import PortfolioBox from '../components/portfolioBox/portfolioBox';
 import TechTag from '../components/techTag/techTag';
 import Testimonials from '../components/testimonials/testimonials';
 import WebServiceBox from '../components/webServiceBox/webServiceBox';
 import ImageText from '../components/imageText/imageText';
-import { useEffect, useState } from 'react';
+import PortfoliosGrid from '../components/portfoliosGrid/portfoliosGrid';
+import { fetchMetadata } from '../lib/fetchMetadata';
+
+
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/web-development-services/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+  };
+}
 
 function WebDevelopment(){
-
-    const [portfolios, setPortfolios] = useState([]);
-
-    const getPortfolios = async()=>{
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-projects?order=asc&_embed`);
-            if(!response.ok){
-                throw new Error('Network response was not ok: portfolios');
-            }
-            const data = await response.json();
-            setPortfolios(data);
-        }
-        catch (error){
-            console.log('portfolios error:', error)
-        }
-    }
-
-    useEffect(()=>{
-        getPortfolios();
-    },[]);
 
     const techDescription = [
         'Looking to boost your business with a stunning online presence? Hire the best website development agency to achieve your goals. A professional team can design a beautiful, user-friendly website tailored to your needs. With expert guidance, your website will stand out, attracting more customers and enhancing your brand image.',
@@ -107,34 +99,7 @@ function WebDevelopment(){
                     </div>
                 </div>
             </section>
-            {
-                portfolios.length > 0 &&
-                <section className="portfolios_sec">
-                    <div className="container">
-                        <div className="portfolio_content">
-                            <h2 className="sec_title">Web Portfolio</h2>
-                            <div className="portfolio_boxes">
-                                {
-                                    portfolios.map((item, index)=>{
-                                        return(
-                                            <PortfolioBox
-                                            title={item.title.rendered}
-                                            imageUrl={item._embedded['wp:featuredmedia']['0'].source_url}
-                                            key={index}
-                                            /> 
-                                        )
-                                    })
-                                }
-                            </div>
-                            <Button 
-                            title="View Portfolio"
-                            link="/portfolio"
-                            />
-                        </div>
-                    </div>
-                </section>
-            }
-    
+            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>

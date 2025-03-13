@@ -104,7 +104,7 @@ function Header(){
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <Link href="/web-development" className={pathname === "/web-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Web Development</Link>
+                                                                <Link href="/web-development-services" className={pathname === "/web-development-services" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Web Development</Link>
                                                             </li>
                                                             <li>
                                                                 <Link href="/custom-software-development" className={pathname === "/custom-software-development" ? "active" : ""}><MdKeyboardDoubleArrowRight /> Custom Software Development</Link>

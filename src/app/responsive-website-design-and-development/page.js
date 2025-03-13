@@ -6,7 +6,22 @@ import PageBanner from "../components/pageBanner/pageBanner";
 import TechTag from "../components/techTag/techTag";
 import Testimonials from "../components/testimonials/testimonials";
 import WebServiceBox from "../components/webServiceBox/webServiceBox";
+import { fetchMetadata } from "../lib/fetchMetadata";
 import './responsiveWebsite.css';
+
+
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/responsive-website-design-and-development/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+  };
+}
 
 function ResponsiveWebsite(){
     return(

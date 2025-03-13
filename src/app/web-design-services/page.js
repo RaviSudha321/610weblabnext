@@ -1,40 +1,31 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import './webDesign.css';
 import Button from '../components/button/button';
 import CallToAction from '../components/callToAction/callToAction';
 import Testimonials from '../components/testimonials/testimonials';
-import PortfolioBox from '../components/portfolioBox/portfolioBox';
 import TechTag from '../components/techTag/techTag';
 import ImageText from '../components/imageText/imageText';
 import IconList from '../components/iconList/iconList';
 import PageBanner from '../components/pageBanner/pageBanner';
 import WebServiceBox from '../components/webServiceBox/webServiceBox';
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { fetchMetadata } from '../lib/fetchMetadata';
+import PortfoliosGrid from '../components/portfoliosGrid/portfoliosGrid';
 
+
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/web-design-services/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+  };
+}
 
 function WebDesign(){
-
-    const [portfolios, setPortfolios] = useState([]);
-
-    const getPortfolios = async()=>{
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-projects?order=asc&_embed`);
-            if(!response.ok){
-                throw new Error('Network response was not ok: portfolios');
-            }
-            const data = await response.json();
-            setPortfolios(data);
-        }
-        catch (error){
-            console.log('portfolios error:', error)
-        }
-    }
-
-    useEffect(()=>{
-        getPortfolios();
-    },[]);
 
     const techDescription = [
         'At 610 Web Lab, we specialize in crafting unique websites designed to maximize your conversions. Our expert team employs innovative design techniques and data-driven strategies to create a digital presence that stands out and drives tangible results.',
@@ -130,34 +121,7 @@ function WebDesign(){
                 </div>
             </section>
 
-            {
-                portfolios.length > 0 &&
-                <section className="portfolios_sec">
-                    <div className="container">
-                        <div className="portfolio_content">
-                            <h2 className="sec_title">Web Portfolio</h2>
-                            <div className="portfolio_boxes">
-                                {
-                                    portfolios.map((item, index)=>{
-                                        return(
-                                            <PortfolioBox
-                                            title={item.title.rendered}
-                                            imageUrl={item._embedded['wp:featuredmedia']['0'].source_url}
-                                            key={index}
-                                            /> 
-                                        )
-                                    })
-                                }
-                            </div>
-                            <Button 
-                            title="View Portfolio"
-                            link="/portfolio"
-                            />
-                        </div>
-                    </div>
-                </section>
-            }
-            
+            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>

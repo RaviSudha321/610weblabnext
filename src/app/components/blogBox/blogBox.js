@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import './blogBox.css';
 
 function BlogBox({blog}){
+    if (!blog) return null;
+
     return(
         <div className='blog_item'>
             {
@@ -15,9 +18,9 @@ function BlogBox({blog}){
                         <div className='blog_desc' dangerouslySetInnerHTML={{__html:blog.excerpt.rendered.slice(0, 120)+'...'}}></div>
                         <div className='blog_actions'>
                             <span className='icon'>
-                                <img src="/images/calendar.svg" alt="calendar icon" />
+                                <Image src="/images/calendar.svg" alt="Calendar icon" width={46} height={46} />
                             </span>
-                            <img src="/images/arrow-right.svg" alt="arrow" style={{width:'46px'}} />
+                            <Image src="/images/arrow-right.svg" alt="Arrow" width={46} height={46} />
                         </div>
                     </div>
                     <Link href={`/${blog.slug}`} className='blog_link'></Link>

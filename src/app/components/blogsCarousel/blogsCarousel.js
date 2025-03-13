@@ -30,7 +30,7 @@ function BlogsCarousel(){
     
     useEffect(()=>{
       getBlogs();
-    },[process.env.NEXT_PUBLIC_WP_REST_API_URL])
+    },[])
 
     const swiperOptions = {
       loop: true,

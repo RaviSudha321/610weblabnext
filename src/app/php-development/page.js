@@ -1,38 +1,29 @@
-'use client';
-
 import './phpDevelopment.css';
 import Button from '../components/button/button';
 import CallToAction from '../components/callToAction/callToAction';
 import PageBanner from '../components/pageBanner/pageBanner';
-import PortfolioBox from '../components/portfolioBox/portfolioBox';
 import TechTag from '../components/techTag/techTag';
 import Testimonials from '../components/testimonials/testimonials';
 import ImageText from '../components/imageText/imageText';
 import FullwidthImage from '../components/fullwidthImage/fullwidthImage';
-import { useEffect, useState } from 'react';
+import PortfoliosGrid from '../components/portfoliosGrid/portfoliosGrid';
+import { fetchMetadata } from '../lib/fetchMetadata';
+
+
+export async function generateMetadata() {
+  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/php-development/`;
+  const metadata = await fetchMetadata(apiUrl);
+  console.log('metadata',metadata)
+  return {
+    title: metadata?.title || "Default Title",
+    description: metadata?.description || "Default Description",
+    openGraph: metadata?.openGraph || {},
+    twitter: metadata?.twitter || {},
+    //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+  };
+}
 
 function PhpDevelopment(){
-
-    const [portfolios, setPortfolios] = useState([]);
-
-    const getPortfolios = async()=>{
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-projects?order=asc&_embed`);
-            if(!response.ok){
-                throw new Error('Network response was not ok: portfolios');
-            }
-            const data = await response.json();
-            setPortfolios(data);
-        }
-        catch (error){
-            console.log('portfolios error:', error)
-        }
-    }
-
-    useEffect(()=>{
-        getPortfolios();
-    },[]);
-
 
     const techDescription = [
         "PHP is one of the best and most widely used scripting languages. PHP is used as a programming language by big giants of the web like Facebook, Wikipedia, slack, and many more because of its highly flexible and compatible nature. If you are the one who is in search of an expert and reliable PHP developer then get in touch with 610 Web Lab.",
@@ -120,35 +111,7 @@ function PhpDevelopment(){
                 />
             }
             />
-
-            {
-                portfolios.length > 0 &&
-                <section className="portfolios_sec">
-                    <div className="container">
-                        <div className="portfolio_content">
-                            <h2 className="sec_title">Web Portfolio</h2>
-                            <div className="portfolio_boxes">
-                                {
-                                    portfolios.map((item, index)=>{
-                                        return(
-                                            <PortfolioBox
-                                            title={item.title.rendered}
-                                            imageUrl={item._embedded['wp:featuredmedia']['0'].source_url}
-                                            key={index}
-                                            /> 
-                                        )
-                                    })
-                                }
-                            </div>
-                            <Button 
-                            title="View Portfolio"
-                            link="/portfolio"
-                            />
-                        </div>
-                    </div>
-                </section>
-            }
-            
+            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>

@@ -1,0 +1,20 @@
+.portfolio_boxes {
+    grid-gap: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 65px;
+}
+
+@media (max-width:1024px) {
+    .portfolio_content .portfolio_boxes {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:640px) {
+
+    .portfolios_sec .portfolio_content .portfolio_boxes {
+        grid-template-columns: 100%;
+    }
+}
