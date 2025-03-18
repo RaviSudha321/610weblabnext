@@ -1,65 +1,51 @@
-'use client';
-
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import PageBanner from "@/app/components/pageBanner/pageBanner";
-import Loading from "@/app/components/loading/loading";
 import BlogBox from "@/app/components/blogBox/blogBox";
 import './category.css';
+import { fetchMetadata } from "@/app/lib/fetchMetadata";
 
-function Category(){
 
-    const {categorySlug} = useParams();
-    const [category, setCategory] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [categoryPosts, setCategoryPosts] = useState([]);
+export async function generateMetadata({ params }) {
+    const { categorySlug } = await params;
+    const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/category/${categorySlug}/`;
 
-    useEffect(()=>{
-        if (!categorySlug) return;
-        const fetchCategory = async () => {
-            try{
-                setLoading(true);
-                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/categories?slug=${categorySlug}`);
-                if(!response.ok){
-                    console.log('category not fetched');
-                    return;
-                }
-                const data = await response.json();
-                setCategory(data[0] || null);
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setLoading(false);
-            }
-        }
+    const metadata = await fetchMetadata(apiUrl);
 
-        fetchCategory();
-    }, [categorySlug]);
+    return {
+        title: metadata?.title || "Default Title",
+        description: metadata?.description || "Default Description",
+        openGraph: metadata?.openGraph || {},
+        twitter: metadata?.twitter || {},
+        //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+    };
+}
 
-    useEffect( ()=>{
-        if (!category?.id) return;
-        const fetchCategoryPosts = async () => {
-            try{
-                setLoading(true);
-                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/posts?categories=${category.id}&_embed`);
-                if(!response.ok){
-                    console.log('category posts not fetched');
-                    return;
-                }
-                const data = await response.json();
-                setCategoryPosts(data);
-            } catch (error) {
-                console.log('category posts', error);
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchCategoryPosts();
-    }, [category?.id])
+// Fetch category data from WordPress
+async function fetchCategory(categorySlug) {
+    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/categories?slug=${categorySlug}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data[0] || null;
+}
 
-    if(loading){
-        return <Loading />
+// Fetch posts from the category
+async function fetchCategoryPosts(categoryId) {
+    if (!categoryId) return [];
+    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed`);
+    if (!res.ok) return [];
+    return await res.json();
+}
+
+async function CategoryPage({ params }) {
+
+    const { categorySlug } = await params;   
+
+    // Fetch data server-side
+    const category = await fetchCategory(categorySlug);
+    if (!category) {
+        return <div className="">No Category Found!</div>;
     }
+
+    const categoryPosts = await fetchCategoryPosts(category.id);
 
     return(
         <>
@@ -92,4 +78,4 @@ function Category(){
         </>
     )
 }
-export default Category;
+export default CategoryPage;

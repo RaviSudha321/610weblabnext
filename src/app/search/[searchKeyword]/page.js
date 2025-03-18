@@ -1,46 +1,44 @@
-'use client';
-
-import './search.css';
-import { useParams } from 'next/navigation';
+import PageBanner from '@/app/components/pageBanner/pageBanner';
 import BlogBox from '@/app/components/blogBox/blogBox';
 import CallToAction from '@/app/components/callToAction/callToAction';
-import PageBanner from '@/app/components/pageBanner/pageBanner';
 import Testimonials from '@/app/components/testimonials/testimonials';
-import { useEffect, useState } from "react";
-import Loading from '@/app/components/loading/loading';
+import { fetchMetadata } from "@/app/lib/fetchMetadata";
+import './search.css';
 
-function Search(){
 
-    const {searchKeyword} = useParams();
-    const [searchResults, setSearchResults] = useState([]);
-    const [loading, setLoading] = useState(false);
+// Function to generate metadata for the search results page
+export async function generateMetadata({ params }) {
+    const { searchKeyword } = await params; 
+    const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/search/${searchKeyword}`;
 
-    useEffect(()=>{
-        const getPosts = async () => {
-            if (!searchKeyword) return;
-            try {
-                setLoading(true);
-                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/posts?search=searchKeyword&_embed`);
-                if(!response.ok){
-                    console.log('search api not working');
-                    return;
-                }
-                const data = await response.json();
-                setSearchResults(data);
-            }
-            catch (error) {
-                console.log('search error', error);
-            } finally {
-                setLoading(false);
-            }
-        }
+    const metadata = await fetchMetadata(apiUrl);
+    console.log(metadata)
+    return {
+        title: metadata?.title || "Default Title",
+        description: metadata?.description || "Default Description",
+        openGraph: metadata?.openGraph || {},
+        twitter: metadata?.twitter || {},
+        //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
+    };
+}
 
-        getPosts();
-    },[searchKeyword]);
 
-    if(loading){
-        return <Loading />
+// Fetch search results from WordPress
+async function fetchSearchResults(searchKeyword) {
+    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/posts?search=${searchKeyword}&_embed`);
+    if (!res.ok) {
+        console.error('Search API not working');
+        return [];
     }
+    return await res.json();
+}
+
+async function SearchPage({ params }) {
+
+    const { searchKeyword } = await params;
+    
+    // Fetch search results server-side
+    const searchResults = await fetchSearchResults(searchKeyword);
 
     return(
         <div className="search_result_page">
@@ -70,4 +68,4 @@ function Search(){
     )
 }
 
-export default Search;
+export default SearchPage;

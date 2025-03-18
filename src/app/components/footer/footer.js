@@ -68,7 +68,7 @@ function Footer(){
                     <div className="footer_col_three">
                         <h3 className="menu_title">IT Services</h3>
                         <ul className="footer_menu">
-                            <li><Link href="/website-development" className={pathname === "/website-development" ? "active" : ""}>Website Development</Link></li>
+                            <li><Link href="/web-development-services" className={pathname === "/web-development-services" ? "active" : ""}>Website Development</Link></li>
                             <li><Link href="/wordpress-development" className={pathname === "/wordpress-development" ? "active" : ""}>Wordpress Development</Link></li>
                             <li><Link href="/shopify-development" className={pathname === "/shopify-development" ? "active" : ""}>Shopify Development</Link></li>
                             <li><Link href="/php-development" className={pathname === "/php-development" ? "active" : ""}>PHP Development</Link></li>

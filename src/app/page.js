@@ -21,7 +21,7 @@ import './page.css';
 export async function generateMetadata() {
   const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/`;
   const metadata = await fetchMetadata(apiUrl);
-  console.log('metadata',metadata)
+
   return {
     title: metadata?.title || "Default Title",
     description: metadata?.description || "Default Description",
