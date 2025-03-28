@@ -28,7 +28,7 @@ export async function generateMetadata() {
 function WebDesign(){
 
     const techDescription = [
-        'Test At 610 Web Lab, we specialize in crafting unique websites designed to maximize your conversions. Our expert team employs innovative design techniques and data-driven strategies to create a digital presence that stands out and drives tangible results.',
+        'At 610 Web Lab, we specialize in crafting unique websites designed to maximize your conversions. Our expert team employs innovative design techniques and data-driven strategies to create a digital presence that stands out and drives tangible results.',
         'Partnering with 610 Web Lab means benefiting from a seamless blend of creativity and technical expertise. We focus on creating engaging user experiences that guide visitors smoothly through your sales funnel, ultimately boosting your conversion rates.'
     ]
     
