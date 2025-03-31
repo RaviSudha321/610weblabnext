@@ -146,7 +146,7 @@ function WebDesign() {
                         <WebServiceBox
                             title="Dynamic Website Design"
                             description="Dynamic websites are interactive and data-driven. We build dynamic sites that allow real-time content updates, personalized user experiences, and seamless integration with databases or APIs."
-                            backgroundColor="#F6F9FF"
+                            backgroundColor="#F8F7F2"
                         />
                         <WebServiceBox
                             title="Static Website Design"

@@ -16,7 +16,7 @@ function BlogsCarousel(){
       
     const getBlogs = useCallback(async () => {
       try{
-        const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/posts?_embed`);
+        const response = await fetch('https://610weblab.com/wp-json/wp/v2/posts?_embed');
         if(!response.ok){
           throw new Error('Network response was not ok');
       }

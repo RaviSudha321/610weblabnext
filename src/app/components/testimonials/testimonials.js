@@ -17,7 +17,7 @@ function Testimonials(){
     useEffect(()=>{
         const getTestimonials = async() => {
             try{
-                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-testimonials?_embed&order=asc`);
+                const response = await fetch('https://610weblab.com/wp-json/wp/v2/weblab-testimonials?_embed&order=asc');
                 if(!response.ok){
                     throw new Error('Network response was not ok: testimonials');
                 }
@@ -69,7 +69,8 @@ function Testimonials(){
                                         <div className="testimonial_item">
                                             {/* Testimonial Image */}
                                             <div className="testimonial_img">
-                                            {item._embedded ? (
+                                            <img src={item.featured_image_url} alt={item.title.rendered} />
+                                            {/* {item._embedded ? (
                                                 <img
                                                 src={item._embedded["wp:featuredmedia"]["0"].source_url}
                                                 alt={item.title.rendered}
@@ -79,7 +80,7 @@ function Testimonials(){
                                                 src="https://placehold.co/340x360?text=610+Web+Lab"
                                                 alt={item.title.rendered}
                                                 />
-                                            )}
+                                            )} */}
                                             </div>
 
                                             {/* Testimonial Content */}
