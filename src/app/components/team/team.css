@@ -32,7 +32,12 @@
     cursor: pointer;
     transition: all 0.2s linear;
 }
-
+.team_members .member_box .member_img img {
+    width: 100%;
+    border-radius: 5px;
+    height: 342px;
+    object-fit: cover;
+}
 .team_filters li:hover,
 .team_filters li.active {
     color: #73c5eb;
