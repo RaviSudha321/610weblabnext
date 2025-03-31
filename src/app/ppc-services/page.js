@@ -69,7 +69,7 @@ function PpcServices(){
                 </div>
             </section>
 
-            <section className="ppc_services_sec">
+            <section className="offer_ppc_services_sec">
                 <div className="container">
                     <div className="sec_header" style={{maxWidth:"740px", marginInline:"auto", textAlign:"center"}}>
                         <h2 className="sec_title">What We Offer in Our PPC Service Package?</h2>
@@ -104,25 +104,23 @@ function PpcServices(){
                 imageUrl="/images/facebook-ads.webp"
                 imageWidth="500"
                 imagePosition="left"
-                title="Why is Facebook Advertising Important?"
+                title="Why Does the Modern Business World Depend on PPC Services?"
                 description={<>
-                    Facebook Ads provide a powerful way for businesses of all sizes to reach their ideal audience with precision. With advanced interest targeting and budget flexibility, you can connect directly with potential customers and drive meaningful engagement.
+                    In today’s competitive digital landscape, Pay-Per-Click (PPC) services have become essential for businesses looking to achieve instant visibility, targeted reach, and measurable results. Unlike organic marketing, PPC allows brands to appear at the top of search engine results, drive qualified traffic, and boost conversions quickly. With advanced targeting, businesses can reach potential customers at the right time and place, ensuring a higher ROI and better brand exposure. PPC is a cost-effective, data-driven strategy that fuels business growth in the modern era.
                     <br /><br />
-                    From lead generation to large-scale promotions, Facebook marketing keeps you ahead of the competition. Our 610 WebLab team conducts in-depth competitive analysis to ensure your ads reach the right audience and deliver maximum impact.
-                    <br /><br />
-                    Facebook’s robust tracking tools allow for performance optimization, ensuring every campaign yields the best possible results. If you're ready to boost your sales and scale your business, 610 WebLab is here to help! Our expertise in Facebook’s algorithm and proven success in ad management make us the perfect partner to elevate your brand’s online presence.
+                    At 610 WebLab, we create customized, data-driven PPC campaigns that maximize your ROI and fuel business growth. Ready to boost your online success? Let’s craft a winning PPC strategy for you today!
                 </>}
             />
             <ImageText 
-            title="Partner with 610 WebLab for Expert Facebook Ads Solutions"
-            description="Maximize your brand’s reach and conversions with 610 Web Lab’s result-driven Facebook Ads solutions. Our team of experts crafts tailored ad strategies that target the right audience, optimize performance, and deliver high ROI. Whether you want to generate leads, increase website traffic, or boost sales, we ensure your ad campaigns drive real business growth."
+            title="Why Choose 610 WebLab as Your PPC Agency?"
+            description="At 610 WebLab, we specialize in result-driven PPC strategies that help businesses maximize conversions, reduce ad spend waste, and achieve sustainable growth. Our expert team leverages data-driven insights, advanced targeting, and continuous optimization to ensure your ads perform at their best."
             contentAboveButton={<div>
-                <strong>Targeted Ad Strategies</strong>
-                <p>We create data-driven campaigns that reach the most relevant audience, maximizing engagement and conversions.</p>
-                <strong>Optimized Performance</strong>
-                <p>Our team continuously tracks and refines your ads to improve ROI and lower ad spend.</p>
-                <strong>Proven Success</strong>
-                <p>With a track record of delivering high-performing campaigns, we help businesses scale effectively with Facebook Ads.</p>
+                <strong>Customized PPC Strategies</strong>
+                <p>We craft tailored ad campaigns that align with your business objectives, ensuring maximum conversions.</p>
+                <strong>Data-Driven Optimization</strong>
+                <p>With in-depth analytics, A/B testing, and performance tracking, we fine-tune your campaigns for higher ROI.</p>
+                <strong>Expert PPC Management</strong>
+                <p>Our experienced professionals stay updated with the latest PPC trends to keep your business at the forefront of digital marketing.</p>
                 </div>}
             imageUrl="images/digital-marketing.webp"
             imageWidth="535"

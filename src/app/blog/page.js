@@ -22,7 +22,7 @@ function Blog(){
     return(
         <div className="blog_page">
             <PageBanner 
-            title="Start, Build & Grow Your Business with 610weblab Blog"
+            title="Latest Web Development & Marketing Insights"
             />
             <BlogsGrid />
             <CallToAction />

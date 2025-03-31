@@ -129,25 +129,25 @@ function SeoServices(){
                 </div>
             </section>
 
-            <section className="seo_best_choice_services">
+            <section className="seo_best_choice_services" style={{background:"#f6fcff"}}>
                 <div className="container">
                 <h2 className='sec_title'>Why Is 610 WebLab the Best Choice for SEO Services?</h2>
                 <div className='description'>At 610 WebLab, we are committed to delivering top-notch SEO solutions that drive results. Our team of certified SEO experts leverages the latest trends and tailored strategies to help your business achieve long-term success in search rankings.</div>
                     <div className="iconboxes">
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="#fff"
                             title="Certified Experts"
                             description="Our highly skilled and experienced SEO professionals specialize in every aspect of SEO. From on-page and off-page optimization to technical SEO, we ensure top-ranking results and increased organic traffic."
                         />
 
                         <IconBox
-                            backgroundColor="#F1FFFF"
+                            backgroundColor="#fff"
                             title="Trends Integration"
                             description="We stay ahead of Google’s algorithm updates and evolving SEO trends, ensuring that our strategies are always in sync with the latest search engine requirements."
                         />
 
                         <IconBox
-                            backgroundColor="#F8F7F2"
+                            backgroundColor="#fff"
                             title="Tailor-Made Solutions"
                             description="We offer customized SEO packages designed to fit your business goals and budget. Whether you're a startup or an enterprise, we provide personalized SEO solutions to maximize your growth."
                         />

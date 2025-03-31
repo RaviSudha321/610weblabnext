@@ -37,7 +37,12 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 65px;
 }
-
+.digital_marketing_page section.portfolios_sec {
+    padding-top: 0;
+}
+.digital_marketing_page .digital_marketing_services section.image_text_sec {
+    padding-top: 0;
+}
 @media (min-width:1025px) and (max-width:1280px) {
     .digital_marketing_page .image_text_left_col .above_content.children_2 {
         grid-template-columns: 100%;

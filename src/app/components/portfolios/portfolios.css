@@ -35,7 +35,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 26px;
 }
-
+.portfolios_page section.portfolios_sec .description {
+    text-align: center;
+    margin-top:20px;
+}
 @media (max-width:1024px) {
     .portfolio_content .portfolio_boxes {
         margin-top: 50px;

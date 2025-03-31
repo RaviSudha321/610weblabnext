@@ -28,24 +28,22 @@ function FacebookAds() {
                 title="Facebook Ads Services"
                 description="At 610 WebLab, we offer the most advanced Facebook Ads Services. Leverage our expertise to create brand awareness, generate leads, and sell your product/services. Attract more customers to your business and boost your success with our tailored ads."
             />
-
-            <ImageText
-                imageUrl="/images/facebook-ads.webp"
-                imageWidth="500"
-                imagePosition="left"
-                title="What is Facebook Advertising?"
-                description={<>
-                    Facebook offers one of the best opportunities to target the right audience and build powerful sales funnels. It’s a strategic digital marketing approach that helps businesses promote their products or services to a vast audience. But to truly maximize results, you need expert guidance.
-                    <br /><br />
-                    At 610 WebLab, we craft high-performing Facebook ad campaigns tailored to your business goals. Whether you're looking to boost brand awareness, drive conversions, or scale your sales, our expertise ensures you get the best return on investment. Partner with us and take your Facebook advertising to the next level!
-                </>}
-            />
-
-            <section className="iconboxes_sec">
+                <ImageText
+                    imageUrl="/images/facebook-ads.webp"
+                    imageWidth="500"
+                    imagePosition="left"
+                    title="What is Facebook Advertising?"
+                    description={<>
+                        Facebook offers one of the best opportunities to target the right audience and build powerful sales funnels. It’s a strategic digital marketing approach that helps businesses promote their products or services to a vast audience. But to truly maximize results, you need expert guidance.
+                        <br /><br />
+                        At 610 WebLab, we craft high-performing Facebook ad campaigns tailored to your business goals. Whether you're looking to boost brand awareness, drive conversions, or scale your sales, our expertise ensures you get the best return on investment. Partner with us and take your Facebook advertising to the next level!
+                    </>}
+                />
+            <section className="facebook_helps_businesses iconboxes_sec">
                 <div className="container">
-                <h2 className='sec_title'>How Can Facebook Ads Help Businesses Grow?</h2>
-                <div className='description'>Facebook ads are built to target a very specific range of customers, which are relevant. At 610 WebLab, our marketers are so professional that they completely understand your marketing goal. They studied the audience behavior and analyzed the strategies of competitors, then we built a perfect strategy to target the people on Facebook.</div>
-                <div className='description'>If you are interested to know why businesses use Facebook ads and how to get benefits out of them, then read the very best advantages of using Facebook Ads for your business:</div>
+                    <h2 className='sec_title'>How Can Facebook Ads Help Businesses Grow?</h2>
+                    <div className='description'>Facebook ads are built to target a very specific range of customers, which are relevant. At 610 WebLab, our marketers are so professional that they completely understand your marketing goal. They studied the audience behavior and analyzed the strategies of competitors, then we built a perfect strategy to target the people on Facebook.</div>
+                    <div className='description'>If you are interested to know why businesses use Facebook ads and how to get benefits out of them, then read the very best advantages of using Facebook Ads for your business:</div>
                     <div className="iconboxes">
                         <IconBox
                             backgroundColor="#F9F9FF"
@@ -90,39 +88,25 @@ function FacebookAds() {
                 </div>
             </section>
             <ImageText
-                backgroundColor="#f6fcff"
-                imageUrl="/images/facebook-ads.webp"
-                imageWidth="500"
-                imagePosition="left"
-                title="Why is Facebook Advertising Important?"
-                description={<>
-                    Facebook Ads provide a powerful way for businesses of all sizes to reach their ideal audience with precision. With advanced interest targeting and budget flexibility, you can connect directly with potential customers and drive meaningful engagement.
-                    <br /><br />
-                    From lead generation to large-scale promotions, Facebook marketing keeps you ahead of the competition. Our 610 WebLab team conducts in-depth competitive analysis to ensure your ads reach the right audience and deliver maximum impact.
-                    <br /><br />
-                    Facebook’s robust tracking tools allow for performance optimization, ensuring every campaign yields the best possible results. If you're ready to boost your sales and scale your business, 610 WebLab is here to help! Our expertise in Facebook’s algorithm and proven success in ad management make us the perfect partner to elevate your brand’s online presence.
-                </>}
-            />
-            <ImageText 
-            title="Partner with 610 WebLab for Expert Facebook Ads Solutions"
-            description="Maximize your brand’s reach and conversions with 610 Web Lab’s result-driven Facebook Ads solutions. Our team of experts crafts tailored ad strategies that target the right audience, optimize performance, and deliver high ROI. Whether you want to generate leads, increase website traffic, or boost sales, we ensure your ad campaigns drive real business growth."
-            contentAboveButton={<div>
-                <strong>Targeted Ad Strategies</strong>
-                <p>We create data-driven campaigns that reach the most relevant audience, maximizing engagement and conversions.</p>
-                <strong>Optimized Performance</strong>
-                <p>Our team continuously tracks and refines your ads to improve ROI and lower ad spend.</p>
-                <strong>Proven Success</strong>
-                <p>With a track record of delivering high-performing campaigns, we help businesses scale effectively with Facebook Ads.</p>
+                title="Partner with 610 WebLab for Expert Facebook Ads Solutions"
+                description="Maximize your brand’s reach and conversions with 610 Web Lab’s result-driven Facebook Ads solutions. Our team of experts crafts tailored ad strategies that target the right audience, optimize performance, and deliver high ROI. Whether you want to generate leads, increase website traffic, or boost sales, we ensure your ad campaigns drive real business growth."
+                contentAboveButton={<div>
+                    <strong>Targeted Ad Strategies</strong>
+                    <p>We create data-driven campaigns that reach the most relevant audience, maximizing engagement and conversions.</p>
+                    <strong>Optimized Performance</strong>
+                    <p>Our team continuously tracks and refines your ads to improve ROI and lower ad spend.</p>
+                    <strong>Proven Success</strong>
+                    <p>With a track record of delivering high-performing campaigns, we help businesses scale effectively with Facebook Ads.</p>
                 </div>}
-            imageUrl="images/digital-marketing.webp"
-            imageWidth="535"
-            buttons={
-                <Button
-                title="Hire An Expert"
-                link="#"
-                icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
-                />
-            }
+                imageUrl="images/digital-marketing.webp"
+                imageWidth="535"
+                buttons={
+                    <Button
+                        title="Hire An Expert"
+                        link="#"
+                        icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width: "25px"}} />}
+                    />
+                }
             />
             <CallToAction />
             <Testimonials />
