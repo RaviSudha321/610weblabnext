@@ -9,8 +9,8 @@ function OurSteps(){
                 <div className='our_steps_content'>
                     <div className='steps_row steps_top_row'>
                         <div className='step_box step_box_header'>
-                            <h2>Our Step-By</h2>
-                            <p>The web design & development process is a step-by-step method from the initial concept to the final deployment of a website. Here are five pointers.</p>
+                            <h2>Our Step-by-Step Web Design & Development Process</h2>
+                            <p>The web design & development process is a step-by-step method from the initial concept to the final deployment of a website. Here are five pointers:</p>
                         </div>
                         <div className='step_box'>
                             <div className='step_box_content'>

@@ -22,13 +22,14 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 35px;
 }
-
-.web_services_sec {
-    padding-bottom: 0;
+.web_development_page .portfolios_sec{
+    padding-top:0;
 }
-
 .web_development_page .portfolio_boxes {
     margin-top: 50px;
+}
+.web_development_services .image_text_sec{
+    padding-top:0;
 }
 
 @media (min-width:1025px) and (max-width:1280px) {

@@ -23,10 +23,6 @@
     grid-gap: 35px;
 }
 
-.web_services_sec {
-    padding-bottom: 0;
-}
-
 .web_design_page .portfolio_boxes {
     margin-top: 50px;
 }
@@ -36,6 +32,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 65px;
+}
+.web_services .image_text_sec{
+    padding-top: 0;
 }
 
 @media (min-width:1025px) and (max-width:1280px) {
