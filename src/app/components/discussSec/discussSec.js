@@ -86,14 +86,14 @@ function DiscussSec(){
                         </form>
                     </div>
                     <div className="discuss_content">
-                        <h2 className="sec_title">Let's discuss your next creative project.</h2>
+                        <h2 className="sec_title">Let's Discuss Your Next Big Project!</h2>
                         <div className="description">
                             <svg width="55" height="60" viewBox="0 0 62 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 19.4999L57.5 50.9999" stroke="#30A9E0" strokeWidth="5" strokeLinecap="round"/>
                                 <path d="M4 50.1984L58.5298 18.75" stroke="#30A9E0" strokeWidth="5" strokeLinecap="round"/>
                                 <path d="M30.25 65.9484L30.2798 2.99998" stroke="#30A9E0" strokeWidth="5" strokeLinecap="round"/>
                             </svg>
-                            <span>Have a question or want to learn more about our services? We'd love to hear from you! Reach out to us using the contact information below, or fill out the form to send us a message directly.</span>
+                            <span>Have a project in mind? Share your vision with us, and let’s bring it to life. Fill out the form or reach out directly!</span>
                         </div>
                         <SuccessCounter />
                     </div>

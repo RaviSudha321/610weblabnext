@@ -6,8 +6,9 @@
     text-align: center;
 }
 
-.open_source_development_page .image_text_sec:not(:nth-child(3)) {
-    padding-block: 0 !important;
+.open_source_development_page .open_source_platform_expertise .image_text_sec,
+.open_source_development_page .open_source_platform_expertise .fullwidth_img_sec {
+    padding: 0 !important;
 }
 
 .open_source_development_page .portfolio_boxes {
@@ -20,8 +21,12 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 65px;
 }
-
-
+.services_for_scalable_solutions .iconboxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    margin-top:40px;
+}
 @media (min-width:1025px) and (max-width:1280px) {
     .open_source_development_page .image_text_left_col .above_content.children_2 {
         grid-template-columns: 100%;
@@ -42,7 +47,9 @@
         grid-template-columns: repeat(2, 1fr);
         margin-top: 50px;
     }
-
+    .services_for_scalable_solutions .iconboxes{
+        grid-template-columns: repeat(2, 1fr);
+    }
     .open_source_development_page .tech_tag_sec {
         padding-bottom: 50px;
     }
@@ -90,7 +97,6 @@
         margin-inline: auto;
     }
 }
-
 @media (max-width:767px) {
     body .open_source_development_page .portfolio_boxes {
         margin-top: 40px;
@@ -98,7 +104,8 @@
 }
 
 @media (max-width:640px) {
-    .open_source_development_page .image_text_left_col .above_content.children_2 {
+    .open_source_development_page .image_text_left_col .above_content.children_2,
+    .services_for_scalable_solutions .iconboxes {
         grid-template-columns: 100%;
     }
 

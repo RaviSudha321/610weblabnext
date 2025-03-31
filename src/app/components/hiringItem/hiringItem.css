@@ -5,6 +5,7 @@
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
+    box-shadow: 4px 4px 4px 0px #30A9E033;
 }
 
 .hiring_item.hidden {

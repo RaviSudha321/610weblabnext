@@ -7,8 +7,8 @@ function Mission(){
             <div className='container'>
                 <div className='mission_inner_sec'>
                     <div className='mission_content'>
-                        <h2 className='sec_title'>Our Mission and Vision</h2>
-                        <p className='description'>We work with a mission of providing unmatched and powerful software, web-based designing and development services.</p>
+                        <h2 className='sec_title'>Building Future-Ready Digital Experiences</h2>
+                        <p className='description'>We are committed to crafting high-performing digital experiences through advanced technology, strategic design, and user-centric solutions.</p>
                     </div>
                 </div>
             </div>

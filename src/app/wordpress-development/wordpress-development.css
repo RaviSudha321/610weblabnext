@@ -1,0 +1,26 @@
+.wordpress_development_services{
+    padding-top:0;
+}
+.wordpress_development_services .image_text_sec,
+.wordpress_development_services  .fullwidth_img_sec{
+    padding:0
+}
+.wordpress_development_services .wordpress_development_services_title{
+    padding-bottom:40px;
+}
+.wordpress_development_page .iconboxes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+@media screen and (max-width:1024px){
+    .wordpress_development_page .iconboxes{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:640px){
+    .wordpress_development_page .iconboxes{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -32,7 +32,7 @@ function TechnologiesTabs(){
                     </div>
                     <div className='technology_tabs_contents'> 
                         <div className={`tt_content ${activeTab == 0 ? 'active' : ''}`}>
-                            <p className='description'>In web development, front-end technologies attract users with visually appealing interfaces, while back-end technologies ensure smooth data interaction. Without captivating visuals, user engagement diminishes. Back-end tools, frameworks, and databases manage server-side operations, facilitating communication with the front end.</p>
+                            <p className='description'>We use cutting-edge web technologies to create reliable fast websites that can grow with your business. Our approach to building sites makes sure they're quick, secure, and easy to use. This helps businesses make a big impact online with web solutions that are tailored to their needs and work well.</p>
                             <div className='technology_logos'>
                                 <div className='technology_img'>
                                     <img src="/images/web-development/html5.png" alt="html logo" />
@@ -61,7 +61,7 @@ function TechnologiesTabs(){
                             </div>
                         </div>
                         <div className={`tt_content ${activeTab == 1 ? 'active' : ''}`}>
-                            <p className='description'>In web development, front-end technologies attract users with visually appealing interfaces, while back-end technologies ensure smooth data interaction. Without captivating visuals, user engagement diminishes. Back-end tools, frameworks, and databases manage server-side operations, facilitating communication with the front end.</p>
+                            <p className='description'>We utilize advanced SEO, PPC, and social media marketing strategies powered by AI-driven analytics, automation tools, and data-driven insights. Our expertise in platforms like Google Ads, Meta Ads, and email marketing ensures targeted campaigns that drive engagement, leads, and brand growth.</p>
                             <div className='technology_logos'>
                                 <div className='technology_img'>
                                     <img src="/images/digital-marketing/Ad.png" alt="Ad logo" />
@@ -78,7 +78,7 @@ function TechnologiesTabs(){
                             </div>
                         </div>
                         <div className={`tt_content ${activeTab == 2 ? 'active' : ''}`}>
-                            <p className='description'>In web development, front-end technologies attract users with visually appealing interfaces, while back-end technologies ensure smooth data interaction. Without captivating visuals, user engagement diminishes. Back-end tools, frameworks, and databases manage server-side operations, facilitating communication with the front end.</p>
+                            <p className='description'>Our graphic design services use the latest tools to produce eye-catching designs. We cover everything from branding and UI/UX to social media content focusing on looks and usability to boost brand image and user engagement.</p>
                             <div className='technology_logos'>
                             <div className='technology_img'>
                                     <img src="/images/graphic-design/Ai.png" alt="ai logo" />
@@ -92,7 +92,7 @@ function TechnologiesTabs(){
                             </div>
                         </div>
                         <div className={`tt_content ${activeTab == 3 ? 'active' : ''}`}>
-                            <p className='description'>In web development, front-end technologies attract users with visually appealing interfaces, while back-end technologies ensure smooth data interaction. Without captivating visuals, user engagement diminishes. Back-end tools, frameworks, and databases manage server-side operations, facilitating communication with the front end.</p>
+                            <p className='description'>We build strong mobile apps with Flutter, React Native, and Swift making sure they work on iOS and Android. Our apps are made to be fast, secure, and keep users interested. They include cutting-edge features such as AI push notifications, and real-time data synchronization.</p>
                             <div className='technology_logos'>
                             <div className='technology_img'>
                                     <img src="/images/mobile-app/81.png" alt="android logo" />

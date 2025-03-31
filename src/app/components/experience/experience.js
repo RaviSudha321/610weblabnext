@@ -7,15 +7,16 @@ function Experience(){
         <section className='experience_sec'>
             <div className='container'>
                 <div className='experience_content'>
-                    <h2 className='sec_title'>3 years of experience in this world, being the first and foremost choice of business people.</h2>
+                    <h2 className='sec_title'>3+ Years of Excellence in Digital Solutions</h2>
+                    <p className='description'>We bring innovation and expertise to help businesses thrive in the digital landscape.</p>
                     <div className='experience_list'>
                         <ul>
-                            <li>An abundance of resources</li>
-                            <li>Add advanced features</li>
-                            <li>Support that Helps</li>
-                            <li>Edit your mobile view</li>
-                            <li>State of the art security</li>
-                            <li>Optimize search engines</li>
+                            <li>Access to top-tier resources</li>
+                            <li>24/7 expert support</li>
+                            <li>Advanced security measures</li>
+                            <li>Feature-rich solutions</li>
+                            <li>Mobile-responsive designs</li>
+                            <li>SEO-optimized strategies</li>
                         </ul>
                     </div>
                     <Button 

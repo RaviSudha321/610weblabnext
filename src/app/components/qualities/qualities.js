@@ -6,13 +6,13 @@ function Qualities(){
     const qualitiesData = [
         {
             title: "Team Work",
-            description: "Team Work is one of the keys to success, and at 610 WebLab we communicate to share ideas and knowledge, delight and appreciate each other to keep the motivation high as always.",
+            description: "Teamwork is one of the keys to success, and at 610 WebLab, we communicate to share ideas and knowledge, delight and appreciate each other to keep the motivation high as always.",
             imgSrc: "/images/team-work.svg",
             bgColor: "#F9F9FF"
         },
         {
             title: "Unmatched & powerful solutions",
-            description: "Team Work is one of the keys to success, and at 610 WebLab we communicate to share ideas and knowledge, delight and appreciate each other to keep the motivation high as always.",
+            description: "610 WebLab is known as a leading software and web-based service provider across the globe. We always strive to provide out-of-the-box solutions.",
             imgSrc: "/images/powerful-solutions.svg",
             bgColor: "#F1FFFF"
         },
@@ -24,13 +24,13 @@ function Qualities(){
         },
         {
             title: "Client Satisfaction",
-            description: "Client Satisfaction is another work principle of our squad. We are always ready to serve our clients with future-proof and tailored solutions that satisfy all of their business needs.",
+            description: "Client Satisfaction is another working principle of our squad. We are always ready to serve our clients with future-proof and tailored solutions that satisfy all of their business needs.",
             imgSrc: "/images/client-satisfaction.svg",
             bgColor: "#FFFAFE"
         },
         {
             title: "24*7 Support system",
-            description: "A support team is available 24*7 to help our clients with the error and other issues they got during the project or even after completion of the project.",
+            description: "A support team is available 24*7 to help our clients with errors and other issues they encounter during the project or even after completion of the project.",
             imgSrc: "/images/support.svg",
             bgColor: "#F3F1EA"
         }

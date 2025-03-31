@@ -10,6 +10,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
 }
+.brand_reach.iconboxes_sec .iconboxes{
+    margin-top:40px;
+}
+section.generating_leads_sec {
+    background: #f6fcff;
+}
+section.generating_leads_sec .generating_leads_boxes .icon_box{
+    background-color: #fff;
+}
 
 @media (max-width:1280px) {
     body .iconboxes {

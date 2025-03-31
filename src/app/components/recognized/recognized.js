@@ -11,15 +11,16 @@ function Recognized(){
             description: "We believe in creating modern and highly responsive designs for our client’s project."
         },
         { 
-            icon: "/images/modern-responsive-design.svg", 
-            title: "Build Your Website Professionally", 
-            description: "We create highly interactive and professional websites to give a face to your business."
-        },
-        { 
             icon: "/images/awarded.svg", 
             title: "Awarded Licensed Company", 
             description: "We are an officially licensed company, ready to deliver the best solutions to our customers."
+        },
+        { 
+            icon: "/images/modern-responsive-design.svg", 
+            title: "Build Your Website Professionally", 
+            description: "We create highly interactive and professional websites to give a face to your business."
         }
+        
     ];
 
     return(

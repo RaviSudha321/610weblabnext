@@ -28,23 +28,23 @@ export async function generateMetadata() {
 function WebDesign(){
 
     const techDescription = [
-        'At 610 Web Lab, we specialize in crafting unique websites designed to maximize your conversions. Our expert team employs innovative design techniques and data-driven strategies to create a digital presence that stands out and drives tangible results.',
-        'Partnering with 610 Web Lab means benefiting from a seamless blend of creativity and technical expertise. We focus on creating engaging user experiences that guide visitors smoothly through your sales funnel, ultimately boosting your conversion rates.'
+        'Do you know Google processes over 3.5 billion searches per day in the USA only? Those are the people you can attract, engage, and sell your service or product to. It’s a digital era and every consumer is searching for a seller or a service provider online to get solutions to their needs.',
+        'So what are you thinking about, get a professional website designed today for your business with 610 WebLab, an industry expert with more than 10 years of Experience in Website <b>designing services</b>. We served over a thousand happy customers. If you have any questions feel free to contact us, our experts will be happy to help you.'
     ]
     
     return(
         <div className="web_design_page">
             <PageBanner 
             title="Website Design Services"
-            description="Crafting a successful online identity demands the right tools and a dedicated team behind you. Our experts will build a visually stunning website tailored to your business goals. We ensure your custom website authenticates your brand and positions you for unparalleled success in the digital landscape."
+            description="Get professional website design services with the most creative team of experts. We don’t just design websites, we bring your ideas and plans into reality."
             />
             <TechTag
-            title="Build a Unique Website for Higher Conversions"
+            title="Innovative Web Design services for all your business needs"
             description={techDescription}
             />
             <ImageText
-            title="Website UI/UX Design"
-            description="UX drives UI. Our team of UX designers at 610weblab have ample of years of experience in the core areas of user experience, which helps them collaborate the finer modules of usability and functionality in-line with business goals and end-user needs."
+            title="UI/UX"
+            description="Our Expert Designs a website like a picture on canvas. Everything from wireframe to mockup design & logo design, 610 WebLab is the one-stop shop for all designing needs."
             buttons={
                 <Button 
                     title="Hire An Expert" 
@@ -55,16 +55,53 @@ function WebDesign(){
             imageUrl="images/ui-ux.webp"
             contentAboveButton={[
                 <IconList
-                key="Ui /Ux Design Process"
-                title="Ui /Ux Design Process"
+                key="Why choose UI/UX"
+                title="Why choose UI/UX"
                 icon={<FaRegArrowAltCircleRight size="13" fill="#30A9E0" />}
-                items={['Research and Discovery', 'Define Project Requirements', 'Information Architecture', 'Wireframing and Prototyping', 'Visual Design']}
-                />,
+                items={['User-friendly and highly engaging websites.', 'Customized section of the website', 'SEO-friendly design and structure of the website.']}
+                />
+            ]
+            }
+            />
+            <ImageText
+            title="HTML"
+            description="A team of certified developers at 610 WebLab creates every segment of your website in HTML and gives a defined user-friendly structure to the website."
+            buttons={
+                <Button 
+                    title="Hire An Expert" 
+                    link="/contact-us" 
+                    icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />} 
+                />
+            }
+            imageUrl="images/ui-ux.webp"
+            imagePosition="left"
+            contentAboveButton={[
                 <IconList
-                key="Key Features of Figma"
-                title="Key Features of Figma"
+                key="Why choose HTML"
+                title="Why choose HTML"
                 icon={<FaRegArrowAltCircleRight size="13" fill="#30A9E0" />}
-                items={['Prototyping', 'Responsive Design', 'User Testing and Feedback', 'Developer Handoff Features', 'Security and Accessibility Features']}
+                items={['Compatible with every browser', 'Keeps your website light-weight and loads faster', 'SEO-friendly site structure']}
+                />
+            ]
+            }
+            />
+            <ImageText
+            title="CSS"
+            description="We use thousands of different website styling & representation options in CSS, We create future-proof, beautiful-looking designs that convert more visitors into customers."
+            buttons={
+                <Button 
+                    title="Hire An Expert" 
+                    link="/contact-us" 
+                    icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />} 
+                />
+            }
+            imageUrl="images/ui-ux.webp"
+            contentAboveButton={[
+                <IconList
+                key="Why choose CSS"
+                title="Why choose CSS"
+                icon={<FaRegArrowAltCircleRight size="13" fill="#30A9E0" />}
+                items={['Custom Styling and thousands of design options', 'User-friendly and highly converting websites', 'Search Engine friendly and appealing site structure']}
                 />
             ]
             }
@@ -73,7 +110,7 @@ function WebDesign(){
             <ImageText 
             backgroundColor="#F6FCFF"
             title="Our Website Design Process"
-            description="Creating a website is an intricate process that combines creativity, technical skills, and strategic thinking. Our streamlined approach ensures that each project is executed efficiently and effectively, resulting in a website that not only looks great but also performs seamlessly. Follow this five-step process to create your winning website"
+            description="Creating a website is a complex process that combines creativity, technical skills, and strategic thinking. Our streamlined approach ensures that each project is executed efficiently and effectively, resulting in a website that not only looks great but also performs seamlessly. Follow this five-step process to create your winning website."
             buttons={
                 <Button 
                     title="Hire An Expert" 
@@ -85,6 +122,7 @@ function WebDesign(){
             imagePosition="left"
             contentAboveButton={[
                 <IconList
+                key="Website Design Process"
                 icon={<FaRegArrowAltCircleRight size="13" fill="#30A9E0" />}
                 items={['Forming the Design Brief', 'Technology and Resource Planning', 'Identifying the Minimum Viable Product and Best ROIs', 'Design Development', 'Handoffs, Verification and Maintenance']}
                 />
@@ -105,7 +143,7 @@ function WebDesign(){
                         <WebServiceBox
                         title="Dynamic Website Design"
                         description="Dynamic websites are interactive and data-driven. We build dynamic sites that allow real-time content updates, personalized user experiences, and seamless integration with databases or APIs."
-                        backgroundColor="#F9F9FF"
+                        backgroundColor="#F6F9FF"
                         />
                         <WebServiceBox
                         title="Static Website Design"
@@ -120,7 +158,28 @@ function WebDesign(){
                     </div>
                 </div>
             </section>
-
+            <ImageText 
+            backgroundColor="#F6FCFF"
+            title="Why Choose Us for a Successful Website Design Project?"
+            description="At 610 WebLab, we specialize in creating stunning, high-performing websites that align with your business goals. Here’s what sets us apart:"
+            contentAboveButton={<div>
+                <strong>Strategic Project Planning </strong>
+                <p>We craft a detailed, time-bound strategy after understanding your brand and business needs, ensuring a seamless and efficient design process.</p>
+                <strong>Skilled & Dedicated Team </strong>
+                <p>Our expert designers, developers, and strategists collaborate to deliver visually impressive and user-friendly websites that drive results.</p>
+                <strong>Industry-Leading Expertise</strong>
+                <p>With years of experience, we tackle design challenges and technical complexities with ease, delivering innovative web solutions for diverse businesses.</p>
+                </div>}
+            imageUrl="images/digital-marketing.webp"
+            imageWidth="535"
+            buttons={
+                <Button
+                title="Hire An Expert"
+                link="#"
+                icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
+                />
+            }
+            />
             <PortfoliosGrid />
             <CallToAction />
             <Testimonials />

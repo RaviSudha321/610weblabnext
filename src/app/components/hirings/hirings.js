@@ -54,8 +54,8 @@ function Hirings(){
     return(
         <section className='hirings_sec'>
             <div className='container'>
-                <h2 className='sec_title'>We are hiring value-based skills</h2>
-                <div className='description'>610weblab is inviting talented and serious professionals from Developers to experts in Design, SEO, Testing, and more to be a part of the top-performing Software Development Company. Email us your updated Résumé/CV at <u><a href="mailto:support@610weblab.com">support@610weblab.com</a></u>. We are currently hiring for the below positions:</div>
+                <h2 className='sec_title'>Hiring Minds That Shape the Future</h2>
+                <div className='description'>At 610 WebLab, we’re looking for skilled and passionate professionals across various domains, including Development, Design, SEO, Testing, and more. If you're ready to be part of a top-performing software development company, we’d love to hear from you! Send your updated résumé/CV to <a href="mailto:support@610weblab.com">support@610weblab.com</a>. We are currently hiring for the following positions:</div>
                 {
                     hirings.length > 0 ?
                     <div className='hirings_content'>

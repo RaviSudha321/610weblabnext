@@ -1,0 +1,24 @@
+.custom_software_development_page .custom-software-development-steps section.image_text_sec,
+.custom_software_development_page .custom-software-development-steps .fullwidth_img_sec {
+    padding: 0;
+}
+.software_services_stand_out .iconboxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    margin-top:40px;
+}
+.software_services_stand_out .description{
+    margin-top:10px;
+    text-align: center;
+}
+@media screen and (max-width:1024px){
+    .software_services_stand_out .iconboxes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:640px){
+    .software_services_stand_out .iconboxes{
+        grid-template-columns: 100%;
+    }
+}

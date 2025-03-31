@@ -22,7 +22,7 @@ function Portfolio(){
     return(
         <div className="portfolios_page">
             <PageBanner 
-            title="Take a look at some of our projects"
+            title="Our Portfolio"
             />
             <Portfolios />
             <CallToAction />

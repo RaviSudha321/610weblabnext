@@ -46,6 +46,9 @@
     margin-top: 40px;
     display: flex;
 }
+.experience_sec p.description{
+    margin:12px 0 0;
+}
 
 @media (max-width:767px) {
     .experience_content .experience_list ul {

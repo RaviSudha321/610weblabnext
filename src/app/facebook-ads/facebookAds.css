@@ -3,7 +3,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-
+.social_media_marketing_page .iconboxes_sec .description {
+    margin-top: 10px;
+    text-align: center;
+}
+.social_media_marketing_page h2{
+    margin-bottom:20px;
+}
+.social_media_marketing_page .iconboxes {
+    margin-top: 40px;
+}
 @media (max-width:1280px) {
     body .iconboxes {
         grid-template-columns: repeat(2, 1fr);
