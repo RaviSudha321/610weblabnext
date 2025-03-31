@@ -21,9 +21,9 @@ function WorkCulture(){
         <section className='work_culture_sec'>
             <div className='container'>
                 <div className='work_culture_content'>
-                    <h2 className='sec_title'>Establishing a working culture that Inspires</h2>
+                    <h2 className='sec_title'>Developing a Work Culture That Inspires</h2>
                     <div className='description'>
-                    610weblab never let the spotlight shift from their employees who are the fuel behind this company. We encourage the growth of our employees by practicing innovative approaches that boost their morale. Above all, a balanced work-life culture is promoted inspiring freedom and creativity.
+                    At 610 WebLab, our employees always come first—they’re the heart of our company. We help them grow by using new ideas to keep them motivated and inspired. Most importantly, we encourage a healthy balance between work and life, giving everyone the freedom to think creatively. We believe happy employees make a successful company.
                     </div>
                     <div className='work_culture_gallery'>
                         <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 481: 2, 768: 3, 1025: 4}}>

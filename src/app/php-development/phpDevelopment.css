@@ -6,8 +6,9 @@
     text-align: center;
 }
 
-.php_development_page .image_text_sec {
-    padding-block: 0 !important;
+.php_development_page .php_services .image_text_sec,
+.php_development_page .php_services .fullwidth_img_sec {
+    padding: 0 !important;
 }
 
 .php_development_page .portfolio_boxes {
@@ -21,7 +22,12 @@
     margin-top: 65px;
 }
 
-
+.php_development_process .iconboxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    margin-top:40px;
+}
 @media (min-width:1025px) and (max-width:1280px) {
     .php_development_page .image_text_left_col .above_content.children_2 {
         grid-template-columns: 100%;
@@ -89,6 +95,9 @@
         width: fit-content;
         margin-inline: auto;
     }
+    .php_development_process .iconboxes{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width:767px) {
@@ -98,7 +107,8 @@
 }
 
 @media (max-width:640px) {
-    .php_development_page .image_text_left_col .above_content.children_2 {
+    .php_development_page .image_text_left_col .above_content.children_2,
+    .php_development_process .iconboxes {
         grid-template-columns: 100%;
     }
 

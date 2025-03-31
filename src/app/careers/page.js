@@ -1,46 +1,66 @@
 import Button from "../components/button/button";
 import Hirings from "../components/hirings/hirings";
 import ImageText from "../components/imageText/imageText";
+import IconList from '../components/iconList/iconList';
 import PageBanner from "../components/pageBanner/pageBanner";
 import SelectionProcess from "../components/selectionProcess/selectionProcess";
 import Testimonials from "../components/testimonials/testimonials";
 import WorkCulture from "../components/workCulture/workCulture";
-import { fetchMetadata } from "../lib/fetchMetadata";
+import {FaRegArrowAltCircleRight} from "react-icons/fa";
+import {fetchMetadata} from "../lib/fetchMetadata";
 
 
 export async function generateMetadata() {
-  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/career/`;
-  const metadata = await fetchMetadata(apiUrl);
+  const apiUrl=`https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/career/`;
+  const metadata=await fetchMetadata(apiUrl);
 
   return {
-    title: metadata?.title || "Default Title",
-    description: metadata?.description || "Default Description",
-    openGraph: metadata?.openGraph || {},
-    twitter: metadata?.twitter || {},
+    title: metadata?.title||"Default Title",
+    description: metadata?.description||"Default Description",
+    openGraph: metadata?.openGraph||{},
+    twitter: metadata?.twitter||{},
     //jsonLd: metadata?.jsonLd || "", // Store JSON-LD as a string
   };
 }
 
-function Careers(){
-    return(
-        <div className="careers_page">
-            <PageBanner
-            title="Join Our Team!"
-            description="Check out our current job openings and shoot us your resume, links or whatever best tells your story."
-            />
-            <Hirings />
-            <SelectionProcess />
-            <ImageText 
-            title="One Team, One Heart, One Legacy."
-            description="At eSparkBiz, we cultivate a positive workplace where happy employees are our top priority. Our work culture ensures we hire the right people and give them the freedom for creativity and a result-driven work atmosphere to solve incremental challenges and add value. Career growth is most important for work satisfaction, and we provide ample opportunities, infrastructure, and work environment to our employees to achieve it."
-            buttons={<Button title="Join Our Team" link="/contact-us" />}
-            imageUrl="images/team-trip.webp"
-            imageWidth="630"
-            />
-            <WorkCulture />
-            <Testimonials />
-        </div>
-    )
+function Careers() {
+  return (
+    <div className="careers_page">
+      <PageBanner
+        title="Grow With Us at 610 WebLab"
+        description="We’re building a dynamic team of innovative, creative, and passionate professionals like you. If you're eager to advance your career, work on cutting-edge technologies, and make a real impact, you’re in the right place."
+      />
+      <Hirings />
+      <SelectionProcess />
+      <ImageText
+        title="Build the Future of Web Innovation with Us"
+        description="We’re not just building websites—we’re shaping the future of web innovation. Our team thrives on creativity, collaboration, and cutting-edge technology to craft exceptional digital experiences. Whether you're a developer, designer, strategist, or tech enthusiast, this is your chance to be part of something big."
+        buttons={
+          <Button
+            title="Join Our Team"
+            link="/contact-us"
+            icon={
+              <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.9792 0.0290966C10.1636 0.136713 9.43856 0.504877 8.81552 1.13359C8.18681 1.7623 7.81298 2.49296 7.71669 3.29726C7.66571 3.70507 7.64306 3.68808 7.5411 3.16699C7.40517 2.42499 6.81044 1.61503 6.1081 1.22421C4.31825 0.204682 2.0413 1.30351 1.69013 3.3539C1.55419 4.1582 1.83173 5.13242 2.36981 5.7498L2.59638 6.00468L2.3245 6.10097C1.40692 6.42382 0.523329 7.43203 0.262782 8.44023C0.143837 8.89335 0.132509 10.9947 0.240126 11.142C0.336415 11.2609 1.25966 11.6914 1.83739 11.884C2.26786 12.0256 3.28739 12.2578 3.48563 12.2578C3.64989 12.2578 3.91044 11.9463 3.91044 11.748C3.91044 11.4762 3.7122 11.3232 3.2704 11.2439C2.75497 11.1533 2.00731 10.9324 1.49188 10.7172L1.06141 10.5359L1.0954 9.70898C1.13505 8.75742 1.24833 8.33828 1.61083 7.8455C1.87704 7.483 2.15458 7.2621 2.64735 7.02988L3.03251 6.84863H4.65243H6.26669L6.69149 7.06386C6.91806 7.17714 7.18427 7.33574 7.27489 7.40937L7.44481 7.55097L7.04833 7.93613C6.44794 8.52519 6.04013 9.21054 5.8079 10.0205C5.68329 10.451 5.61532 13.2434 5.71728 13.4416C5.80224 13.5945 6.7538 14.0533 7.60341 14.3422C8.89481 14.7896 10.1069 14.9879 11.5003 14.9879C12.4915 14.9879 13.1655 14.9199 14.0944 14.716C15.3575 14.4328 17.1134 13.7248 17.272 13.4303C17.3852 13.215 17.3286 10.4793 17.1927 10.0205C16.9604 9.21621 16.5583 8.54218 15.9522 7.93613L15.5558 7.55097L15.7257 7.40937C15.8163 7.33574 16.0825 7.17714 16.3091 7.06386L16.7339 6.84863H18.3481H19.9681L20.3532 7.02988C20.846 7.2621 21.1235 7.483 21.3897 7.8455C21.7522 8.33828 21.8655 8.75742 21.9052 9.70898L21.9392 10.5359L21.5087 10.7172C20.9933 10.9324 20.2456 11.1533 19.7302 11.2439C19.2884 11.3232 19.0901 11.4762 19.0901 11.748C19.0901 11.9463 19.3507 12.2578 19.5149 12.2578C19.7132 12.2578 20.7327 12.0256 21.1632 11.884C21.7409 11.6914 22.6642 11.2609 22.7604 11.142C22.8624 11.0004 22.8511 8.87636 22.7434 8.46288C22.4659 7.42636 21.5936 6.42949 20.6761 6.10097L20.4042 6.00468L20.6308 5.7498C20.9479 5.3873 21.2255 4.76992 21.3104 4.25449C21.5597 2.64023 20.3985 1.0996 18.7503 0.861713C17.8554 0.73144 16.9321 1.04863 16.2581 1.72265C15.8333 2.14746 15.5501 2.65722 15.4595 3.16699C15.3575 3.68808 15.3349 3.70507 15.2839 3.29726C15.1026 1.81894 13.8962 0.470893 12.4349 0.114058C11.9647 0.000776291 11.4267 -0.0332088 10.9792 0.0290966ZM12.2083 1.05429C12.6331 1.16191 13.1768 1.49042 13.5337 1.86425C14.6212 2.99706 14.6212 4.64531 13.528 5.77812C12.4179 6.93359 10.7413 6.96757 9.55751 5.85742C8.38505 4.75859 8.3454 3.03105 9.47255 1.85859C10.2032 1.0996 11.2058 0.805073 12.2083 1.05429ZM5.43407 1.9832C6.04013 2.25507 6.51591 2.86113 6.63485 3.51249C6.78778 4.35078 6.26102 5.27968 5.41142 5.6705C4.35224 6.15195 3.07782 5.54023 2.70966 4.37343C2.57938 3.94863 2.57938 3.68808 2.70966 3.26328C3.08349 2.07949 4.34091 1.48476 5.43407 1.9832ZM18.8352 1.86425C19.5149 2.03984 20.0643 2.5666 20.2796 3.24628C20.4212 3.69374 20.4212 3.94296 20.2852 4.3791C20.0757 5.06445 19.5093 5.60253 18.8126 5.77812C18.1442 5.94804 17.4419 5.73281 16.9265 5.20039C16.3431 4.59433 16.1788 3.76171 16.5073 3.05371C16.8358 2.33437 17.5892 1.80761 18.3255 1.78496C18.4218 1.77929 18.654 1.81894 18.8352 1.86425ZM7.90927 5.10976C8.09618 5.62519 8.4247 6.13496 8.80419 6.50878L9.10438 6.79765L8.71356 6.92792L8.32274 7.05253L8.01122 6.76933C7.68837 6.4748 7.11063 6.11796 6.84442 6.05566L6.69149 6.01601L6.93505 5.71581C7.25224 5.33066 7.46181 4.89453 7.5411 4.46972C7.64306 3.94863 7.66571 3.93163 7.71102 4.32812C7.73935 4.53203 7.82431 4.8832 7.90927 5.10976ZM15.4085 4.20917C15.4085 4.62265 15.6974 5.27402 16.0995 5.75546C16.2354 5.92538 16.2921 6.02734 16.2411 6.02734C16.0599 6.02734 15.3518 6.44081 15.029 6.73535L14.6778 7.05253L14.287 6.92792L13.8962 6.79765L14.1964 6.49746C14.7911 5.90839 15.2102 5.07011 15.2782 4.35078C15.3122 3.9996 15.4085 3.89199 15.4085 4.20917ZM13.6809 7.75488C14.927 8.07206 15.9352 9.0916 16.2581 10.366C16.3487 10.7228 16.3714 10.9947 16.3714 11.8443V12.8865L15.9466 13.0848C14.1058 13.9344 11.6985 14.2459 9.7161 13.8947C8.79852 13.7305 7.55243 13.3453 6.90106 13.0168L6.62919 12.8809V11.8387C6.62919 10.9947 6.65184 10.7228 6.74247 10.366C7.06532 9.10292 8.06786 8.07773 9.2913 7.76054C9.75575 7.63593 13.2052 7.63593 13.6809 7.75488Z" fill="#30A9E0" />
+              </svg>
+            }
+          />
+        }
+        imageUrl="images/team-trip.webp"
+        imageWidth="630"
+        contentAboveButton={[
+          <IconList
+            key="Why Join Us?"
+            title="Why Join Us?"
+            icon={<FaRegArrowAltCircleRight size="13" fill="#30A9E0" />}
+            items={['Work on groundbreaking web solutions','Collaborate with industry experts','Grow with continuous learning opportunities','Enjoy a dynamic, flexible work environment']}
+          />
+        ]}
+      />
+      <WorkCulture />
+      <Testimonials />
+    </div>
+  )
 }
 
 export default Careers;

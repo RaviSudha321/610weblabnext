@@ -1,11 +1,64 @@
+.seo_services_page .iconboxes {
+    display: grid;
+    margin-top: 40px;
+}
+
+.seo_iconboxes_sec .iconboxes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.seo_iconboxes_sec {
+    padding-top: 0;
+}
+
+.seo_iconboxes_sec .description,
+.seo_business_potential .description,
+.seo_best_choice_services .description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.seo_services_page h2 {
+    margin-bottom: 20px;
+}
+
+.seo_services_page .seo_business_potential .iconboxes {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+}
+
+.seo_best_choice_services .iconboxes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media screen and (max-width:1280px) {
+    .seo_services_page .seo_business_potential .iconboxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .seo_services_page .tech_tag_sec {
         padding-bottom: 60px;
+    }
+    .seo_best_choice_services .iconboxes {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 @media (max-width: 767px) {
     .seo_services_page .tech_tag_sec {
         padding-bottom: 50px;
+    }
+}
+
+@media (max-width:640px) {
+
+    .seo_services_page .seo_business_potential .iconboxes,
+    .seo_iconboxes_sec .iconboxes,
+    .seo_best_choice_services .iconboxes  {
+        grid-template-columns: 100%;
     }
 }

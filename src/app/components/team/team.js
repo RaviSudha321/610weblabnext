@@ -37,8 +37,8 @@ function Team(){
     return(
         <section className='team_sec'>
             <div className='container'>
-                <h2 className='sec_title'>Some of our tech experts</h2>
-                <p className='description'>Talent wins games, but teamwork and intelligence win championships.</p>
+                <h2 className='sec_title'>Meet Our Tech Leaders</h2>
+                <p className='description'>Innovators, problem-solvers, and visionaries shaping the future of technology.</p>
                 <div className='team_content'>
                     <ul className='team_filters'>
                        <li data-title="ceo" onClick={()=>{handleCatClick('ceo')}} className={teamCat === 'ceo' ? 'active' : ''}>CEO</li> 

@@ -15,23 +15,22 @@ function WhatWeDo(){
             <div className='container'>
                 <div className='what_we_do_content'>
                     <div className='wwd_left_col'>
-                        <h3 className='sec_sub_title'>What We Do</h3>
-                        <h2 className='sec_title'>We are Professional Digital Team</h2>
-                        <p className='description'>Start from scratch or choose from over 500 designer-made templates that you can fully customize using the drag and drop website builder. Make your site come to life with video backgrounds</p>
+                        <h2 className='sec_title'>Who We Are</h2>
+                        <p className='description'>610 WebLab is a team of passionate tech enthusiasts, designers, developers, and marketers dedicated to delivering top-notch web and software solutions. With a vision to be a global leader, we create innovative, customized, and results-driven digital experiences for businesses worldwide.</p>
                         <div className='wwd_iconboxes'>
                         <div className='wwd_iconbox'>
                                 <div className='wwd_icon'>
                                     <img src="/images/customize-website.svg" alt="Customize Website" style={{width:"41px"}} />
                                 </div>
-                                <h3 className='wwd_iconbox_title'>Customize Website</h3>
-                                <div className='wwd_iconbox_description'>Pick a template customize anything answer or question website design just you.</div>
+                                <h3 className='wwd_iconbox_title'>Our Mission</h3>
+                                <div className='wwd_iconbox_description'>To empower businesses with scalable and high-quality digital solutions that enhance user experience, streamline operations, and drive growth.</div>
                             </div>
                             <div className='wwd_iconbox'>
                                 <div className='wwd_icon'>
                                     <img src="/images/premium-design.svg" alt="Premium Design" style={{width:"37px"}} />
                                 </div>
-                                <h3 className='wwd_iconbox_title'>Premium Design</h3>
-                                <div className='wwd_iconbox_description'>Start your own blog, add an online store and accept bookings online always.</div>
+                                <h3 className='wwd_iconbox_title'>Our Vision</h3>
+                                <div className='wwd_iconbox_description'>To be a globally recognized leader in web and software development, setting new industry standards through innovation, quality, and customer-centric solutions.</div>
                             </div>
                         </div>
                         <div className='wwd_buttons'>

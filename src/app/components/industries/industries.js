@@ -7,8 +7,8 @@ function Services(){
         <section className='industries_sec'>
             <div className='container'>
                 <h3 className='sec_sub_title'>Industries</h3>
-                <h2 className='sec_title'>Web Development Services For Various Industries</h2>
-                <p className='description'>Get ready to elevate your online presence with our Web Development Services in India for various industries. At Webzia Infotech, we offer the perfect blend of technical competency and cross-industry expertise. With us, you can expect innovative solutions tailored to your unique needs.</p>
+                <h2 className='sec_title'>Tailored Web Development Solutions for Every Industry</h2>
+                <p className='description'>At 610 WebLab, we create industry-specific web solutions that align with your business needs and goals. Using the latest technologies, we ensure secure, scalable, and responsive web solutions that help businesses succeed in their respective industries. Let us build a website that speaks to your audience and strengthens your digital presence.</p>
                 <div className='industries'>
                     <div className='industry_box'>
                         <div className='industry_img'>

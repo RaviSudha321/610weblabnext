@@ -19,9 +19,23 @@
     font-size: 20px;
     line-height: 1.6;
     font-weight: 600;
+}
+.blog_title a{
     color: var(--text-color);
 }
-
+.blog_title a:hover{
+    color: var(--light-blue);
+}
+span.blog_read_more svg circle,
+span.blog_read_more svg path{
+    transition: all 0.3s ease-in-out;
+}
+span.blog_read_more a:hover svg circle {
+    fill: var(--light-blue);
+}
+span.blog_read_more a:hover svg path{
+    fill:#fff;
+}
 .blog_desc {
     color: var(--text-color);
     margin-top: 8px;

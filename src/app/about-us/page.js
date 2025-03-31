@@ -24,7 +24,7 @@ function About(){
     return(
         <div className="about_page">
             <PageBanner 
-            title="It’s always about You at 610weblab eServices!!!"
+            title="About 610 WebLab – Your Digital Success Partner"
             />
             <WhatWeDo />
             <Mission />

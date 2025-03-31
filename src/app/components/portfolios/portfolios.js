@@ -64,8 +64,10 @@ function Portfolios(){
         <section className='portfolios_sec'>
             <div className='container'>
                 <div className='portfolio_content'>
-                    <h3 className='sec_sub_title'>Pre-made Template</h3>
-                    <h2 className='sec_title'>Let’s See Our Popular Website Template</h2>
+                    <h2 className='sec_title'>Showcasing Our Best Work</h2>
+                    <div className='description'>
+                    At 610 WebLab, we take pride in every project we deliver, ensuring precision, creativity, and innovation in every detail. Our portfolio reflects our commitment to excellence and the impactful solutions we create for our clients.
+                    </div>
                     {
                         isLoading ?
                         <Loading /> :

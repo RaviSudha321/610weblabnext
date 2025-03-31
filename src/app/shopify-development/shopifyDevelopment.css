@@ -20,7 +20,12 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 65px;
 }
-
+.shopify_development_process .iconboxes, .shopify_development_agency .iconboxes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
 
 @media (min-width:1025px) and (max-width:1280px) {
     .shopify_development_page .image_text_left_col .above_content.children_2 {
@@ -41,6 +46,9 @@
     .portfolio_content .portfolio_boxes {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 50px;
+    }
+    .shopify_development_process .iconboxes, .shopify_development_agency .iconboxes{
+        grid-template-columns: repeat(2,1fr);
     }
 
     .shopify_development_page .tech_tag_sec {
@@ -111,7 +119,8 @@
         width: fit-content;
     }
 
-    .portfolios_sec .portfolio_content .portfolio_boxes {
+    .portfolios_sec .portfolio_content .portfolio_boxes,
+    .shopify_development_process .iconboxes, .shopify_development_agency .iconboxes {
         grid-template-columns: 100%;
     }
 }

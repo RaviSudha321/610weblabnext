@@ -8,9 +8,9 @@ function CallToAction(){
             <div className='container'>
                 <div className='cta_content'>
                     <div className='cta_left_col'>
-                        <h2 className='sec_title'>Let’s Design Your New Website</h2>
+                        <h2 className='sec_title'>Let’s Build Something Exceptional</h2>
                         <div className='description'>
-                        Do you want to have a website that stands out and impresses your clients? Then we are ready to help! Click the button below to contact us and discuss your ideas.
+                        Your business deserves a website that stands out. Let’s craft a custom solution that sets you apart from the competition. Get in touch today!
                         </div>
                     </div>
                     <div className='cta_right_col'>

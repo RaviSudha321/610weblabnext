@@ -4,22 +4,27 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
 }
-
+.responsive_website_page .responsive_design_technologies .responsive_design_technologies_title h2{
+ margin-bottom:40px;
+}
+.responsive_website_page .responsive_design_technologies .image_text_sec:not(:last-of-type){
+    padding-block: 0;
+}
 @media (max-width: 1280px) {
-    .advantages_sec .advantages_boxes {
+     .advantages_boxes {
         grid-gap: 40px;
     }
 }
 
 @media (max-width: 1024px) {
-    .advantages_sec .advantages_boxes {
+     .advantages_boxes {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
 }
 
 @media (max-width: 640px) {
-    .advantages_sec .advantages_boxes {
+     .advantages_boxes {
         grid-template-columns: 100%;
     }
 }
