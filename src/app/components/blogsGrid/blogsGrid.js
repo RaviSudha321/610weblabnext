@@ -19,7 +19,7 @@ function BlogsGrid(){
         const getAllBlogs = async()=>{
             try {
                 setIsLoading(true);
-                const response = await fetch(`https://610weblab.com/wp-json/wp/v2/posts?_embed`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}posts?_embed`);
                 if(!response.ok){
                     console.log('All blogs fetch issue');
                     setIsLoading(false);

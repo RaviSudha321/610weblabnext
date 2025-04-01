@@ -9,7 +9,7 @@ import { fetchMetadata } from '../lib/fetchMetadata';
 
 export async function generateMetadata({ params }) {
     const { blogSlug } = await params;
-    const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/${blogSlug}/`;
+    const apiUrl = `${process.env.NEXT_PUBLIC_WP_REST_API_RANK_MATH_URL}getHead?url=https://610weblab.com/${blogSlug}/`;
 
     const metadata = await fetchMetadata(apiUrl);
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
 
 // Fetch single blog post data from WordPress
 async function fetchSinglePost(blogSlug) {
-    const response = await fetch(`https://610weblab.com/wp-json/wp/v2/posts/?slug=${blogSlug}&_embed`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}posts/?slug=${blogSlug}&_embed`);
     if (!response.ok) {
         console.error('Single post fetch error');
         return null;
