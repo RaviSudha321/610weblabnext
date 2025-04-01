@@ -13,7 +13,7 @@ function BlogSidebar({currentPost}){
 
     const getCategories = useCallback(async() => {
         try {
-            const response = await fetch(`https://610weblab.com/wp-json/wp/v2/categories`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}categories`);
             if(!response.ok){
                 console.log('categories not fetched');
                 return;
@@ -28,7 +28,7 @@ function BlogSidebar({currentPost}){
 
     const getRecentPosts = useCallback(async() => {
         try {
-            let url = `https://610weblab.com/wp-json/wp/v2/posts?_embed`;
+            let url = `${process.env.NEXT_PUBLIC_WP_REST_API_URL}posts?_embed`;
             if (currentPost) {
                 url += `&exclude=${currentPost}`;
             }

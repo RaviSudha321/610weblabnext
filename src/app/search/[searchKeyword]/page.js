@@ -9,7 +9,7 @@ import './search.css';
 // Function to generate metadata for the search results page
 export async function generateMetadata({ params }) {
     const { searchKeyword } = await params; 
-    const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/search/${searchKeyword}`;
+    const apiUrl = `${process.env.NEXT_PUBLIC_WP_REST_API_RANK_MATH_URL}getHead?url=https://610weblab.com/search/${searchKeyword}`;
 
     const metadata = await fetchMetadata(apiUrl);
     console.log(metadata)
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
 
 // Fetch search results from WordPress
 async function fetchSearchResults(searchKeyword) {
-    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/posts?search=${searchKeyword}&_embed`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}posts?search=${searchKeyword}&_embed`);
     if (!res.ok) {
         console.error('Search API not working');
         return [];

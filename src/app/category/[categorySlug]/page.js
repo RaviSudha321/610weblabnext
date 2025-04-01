@@ -6,7 +6,7 @@ import { fetchMetadata } from "@/app/lib/fetchMetadata";
 
 export async function generateMetadata({ params }) {
     const { categorySlug } = await params;
-    const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/category/${categorySlug}/`;
+    const apiUrl = `${process.env.NEXT_PUBLIC_WP_REST_API_RANK_MATH_URL}getHead?url=https://610weblab.com/category/${categorySlug}/`;
 
     const metadata = await fetchMetadata(apiUrl);
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
 
 // Fetch category data from WordPress
 async function fetchCategory(categorySlug) {
-    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/categories?slug=${categorySlug}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}categories?slug=${categorySlug}`);
     if (!res.ok) return null;
     const data = await res.json();
     return data[0] || null;
@@ -30,7 +30,7 @@ async function fetchCategory(categorySlug) {
 // Fetch posts from the category
 async function fetchCategoryPosts(categoryId) {
     if (!categoryId) return [];
-    const res = await fetch(`https://610weblab.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}posts?categories=${categoryId}&_embed`);
     if (!res.ok) return [];
     return await res.json();
 }

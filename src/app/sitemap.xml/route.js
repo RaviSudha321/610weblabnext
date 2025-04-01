@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://610weblab.in/610weblab/";
-    const wpApiUrl = process.env.NEXT_PUBLIC_WP_REST_API_URL || "https://610weblab.in/610weblab/wp-json/wp/v2";
+    const wpApiUrl = process.env.NEXT_PUBLIC_WP_REST_API_URL || "https://610weblab.in/610weblab/wp-json/wp/v2/";
 
     try {
         // Fetch posts & pages from WordPress API

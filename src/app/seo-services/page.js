@@ -10,7 +10,7 @@ import './seoServices.css';
 
 
 export async function generateMetadata() {
-  const apiUrl = `https://610weblab.com/wp-json/rankmath/v1/getHead?url=https://610weblab.com/seo-services/`;
+  const apiUrl = `${process.env.NEXT_PUBLIC_WP_REST_API_RANK_MATH_URL}getHead?url=https://610weblab.com/seo-services/`;
   const metadata = await fetchMetadata(apiUrl);
 
   return {
