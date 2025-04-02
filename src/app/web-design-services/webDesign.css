@@ -33,9 +33,6 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 65px;
 }
-.web_services .image_text_sec{
-    padding-top: 0;
-}
 
 @media (min-width:1025px) and (max-width:1280px) {
     .web_design_page .image_text_left_col .above_content.children_2 {
@@ -79,6 +76,16 @@
     .web_design_page .image_text_sec .description,
     .web_design_page .image_text_sec .sec_title {
         text-align: center;
+    }
+
+    .image_text_right_col .image_area {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .iconlist_main ul.icon_list {
+        width: fit-content;
+        margin-inline: auto;
     }
 
     .web_design_page .image_text_content .buttons {

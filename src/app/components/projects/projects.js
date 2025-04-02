@@ -16,7 +16,7 @@ function Projects(){
 
     const getProjects = async () => {
         try{
-            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}/weblab-projects?_embed&order=asc`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_WP_REST_API_URL}weblab-projects?_embed&order=asc`);
             if(!response.ok){
                 throw new Error('Network response was not ok');
             }
