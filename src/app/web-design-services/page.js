@@ -65,6 +65,7 @@ function WebDesign() {
                     }
                 />
                 <ImageText
+                    backgroundColor="#F6FCFF"
                     title="HTML"
                     description="A team of certified developers at 610 WebLab creates every segment of your website in HTML and gives a defined user-friendly structure to the website."
                     buttons={
