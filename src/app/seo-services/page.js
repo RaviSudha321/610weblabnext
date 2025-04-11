@@ -64,7 +64,7 @@ function SeoServices(){
                         />
 
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="rgb(255, 245, 245)"
                             iconUrl="/images/return-of-investment.svg"
                             iconWidth="46px"
                             title="SEO Content Writing Services"

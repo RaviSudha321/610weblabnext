@@ -51,7 +51,7 @@ function DigitalMarketing(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }
@@ -65,7 +65,7 @@ function DigitalMarketing(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }
@@ -78,7 +78,7 @@ function DigitalMarketing(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }
@@ -94,7 +94,7 @@ function DigitalMarketing(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }
@@ -113,22 +113,22 @@ function DigitalMarketing(){
                         <WebServiceBox
                         title="Understanding Your Audience"
                         description="We use advanced analytics, social media insights, and customer data to analyze audience behavior, preferences, and needs. This helps us craft data-driven strategies that connect with the right people at the right time."
-                        backgroundColor="#F9F9FF"
+                        backgroundColor="rgb(249, 249, 255)"
                         />
                         <WebServiceBox
                         title="Targeted Buyer Personas"
                         description="By gathering and analyzing customer insights, we create detailed buyer personas to refine our marketing messages. This ensures a personalized approach, increasing engagement, trust, and conversion rates for your business."
-                        backgroundColor="#F6F9FF"
+                        backgroundColor="rgb(248, 247, 242)"
                         />
                         <WebServiceBox
                         title="Optimized Customer Journey"
                         description="We map each stage of the customer journey, from awareness to post-purchase, identifying key touchpoints. Our goal is to create a seamless and engaging experience that maximizes customer retention and satisfaction."
-                        backgroundColor="#F1FFFF"
+                        backgroundColor="rgb(241, 255, 255)"
                         />
                         <WebServiceBox
                         title="Sentiment Analysis & Feedback"
                         description="By monitoring feedback and sentiment across various online platforms, we measure customer satisfaction and expectations. This allows us to refine strategies, improve brand perception, and deliver better marketing results."
-                        backgroundColor="#FFFAFE"
+                        backgroundColor="rgb(255, 245, 245)"
                         />
                     </div>
                 </div>
@@ -142,12 +142,12 @@ function DigitalMarketing(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }
             />
-            <PortfoliosGrid />
+
             <CallToAction />
             <Testimonials />
         </div>

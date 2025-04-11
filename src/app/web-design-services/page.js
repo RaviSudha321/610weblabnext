@@ -68,11 +68,12 @@ function WebDesign() {
                     backgroundColor="#F6FCFF"
                     title="HTML"
                     description="A team of certified developers at 610 WebLab creates every segment of your website in HTML and gives a defined user-friendly structure to the website."
-                    buttons={
+                    buttons={ 
                         <Button
                             title="Hire An Expert"
                             link="/contact-us"
                             icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width: "25px"}} />}
+                            buttonBg="#fff"
                         />
                     }
                     imageUrl="images/ui-ux.webp"
@@ -118,6 +119,7 @@ function WebDesign() {
                             title="Hire An Expert"
                             link="/contact-us"
                             icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width: "25px"}} />}
+                            buttonBg="#fff"
                         />
                     }
                     imageUrl="images/design-process.webp"
@@ -181,6 +183,7 @@ function WebDesign() {
                         title="Hire An Expert"
                         link="#"
                         icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width: "25px"}} />}
+                        buttonBg="#fff"
                     />
                 }
             />

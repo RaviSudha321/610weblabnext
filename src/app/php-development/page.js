@@ -43,20 +43,6 @@ function PhpDevelopment() {
                 description={techDescription}
             />
 
-            {/* <ImageText 
-            title="How does 610 Web Lab help you with PHP Development Services?"
-            description="We provide full-fledged custom PHP development services at a pocket-friendly cost. We deliver our projects within a specific time frame and we also provide 24*7 assistance after project delivery. 610 Web Lab will assist you if you are looking for Custom PHP development Services & Optimization of Existing PHP development projects."
-            contentAboveButton="With our PHP development services get dynamic page content, more freedom to manage files on the server, more safety with data encryption & easy management of your data in the database. Call us now and talk to one of our experts to learn more."
-            imageUrl="images/php-development.webp"
-            imagePosition="left"
-            imageWidth="535"
-            />
-
-            <FullwidthImage
-            imageUrl="images/curve-image.webp"
-            alt="curve image"
-            imageWidth="947"
-            /> */}
             <section className="php_services" style={{paddingTop: "0"}}>
                 <ImageText
                     title="Laravel"
@@ -173,7 +159,6 @@ function PhpDevelopment() {
                 </div>
                 }
             />
-            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>

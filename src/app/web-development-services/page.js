@@ -203,7 +203,7 @@ function WebDevelopment() {
                     />
                 }
             />
-            <PortfoliosGrid />
+
             <CallToAction />
             <Testimonials />
         </div>

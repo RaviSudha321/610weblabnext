@@ -46,7 +46,7 @@ function FacebookAds() {
                     <div className='description'>If you are interested to know why businesses use Facebook ads and how to get benefits out of them, then read the very best advantages of using Facebook Ads for your business:</div>
                     <div className="iconboxes">
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="rgb(249, 249, 255)"
                             iconUrl="/images/exact-audience.svg"
                             iconWidth="38px"
                             title="Target the Right Audience"
@@ -54,7 +54,7 @@ function FacebookAds() {
                         />
 
                         <IconBox
-                            backgroundColor="#F1FFFF"
+                            backgroundColor="rgb(248, 247, 242)"
                             iconUrl="/images/web-traffic.svg"
                             iconWidth="46px"
                             title="Drive Traffic to Your Website or App"
@@ -62,7 +62,7 @@ function FacebookAds() {
                         />
 
                         <IconBox
-                            backgroundColor="#F8F7F2"
+                            backgroundColor="rgb(241, 255, 255)"
                             iconUrl="/images/group-of-people.svg"
                             iconWidth="46px"
                             title="Expand Your Reach Globally"
@@ -70,7 +70,7 @@ function FacebookAds() {
                         />
 
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="rgb(255, 245, 245)"
                             iconUrl="/images/return-of-investment.svg"
                             iconWidth="46px"
                             title="Maximize Your Return on Ad Spend (ROAS)"
@@ -78,7 +78,7 @@ function FacebookAds() {
                         />
 
                         <IconBox
-                            backgroundColor="#F1FFFF"
+                            backgroundColor="rgb(240, 245, 242)"
                             iconUrl="/images/lead-generation.svg"
                             iconWidth="46px"
                             title="Generate Quality Leads at Low Cost"
@@ -103,7 +103,7 @@ function FacebookAds() {
                 buttons={
                     <Button
                         title="Hire An Expert"
-                        link="#"
+                        link="/contact-us"
                         icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width: "25px"}} />}
                     />
                 }

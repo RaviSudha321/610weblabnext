@@ -116,29 +116,29 @@ function ShopifyDevelopment() {
                     <h2 className='sec_title'>Shopify Development Process at 610 WebLab</h2>
                     <div className="iconboxes">
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="rgb(249, 249, 255)"
                             title="Planning"
                             description="We begin by understanding your business needs, target audience, and store objectives to create a strategic development plan."
                         />
 
                         <IconBox
-                            backgroundColor="#F1FFFF"
+                            backgroundColor="rgb(248, 247, 242)"
                             title="Designing"
                             description="Our experts craft visually appealing and user-friendly Shopify themes customized to match your brand identity and enhance user experience."
                         />
 
                         <IconBox
-                            backgroundColor="#FFFAFE"
+                            backgroundColor="rgb(241, 255, 255)"
                             title="Development"
                             description="We develop a high-performance Shopify store, integrating essential features, third-party apps, and payment gateways for a seamless shopping experience."
                         />
                         <IconBox
-                            backgroundColor="#F9F9FF"
+                            backgroundColor="rgb(255, 245, 245)"
                             title="Testing"
                             description="Before launching, we conduct rigorous testing to ensure the store runs smoothly, is free of bugs, and provides an optimized user experience."
                         />
                         <IconBox
-                            backgroundColor="#F1FFFF"
+                            backgroundColor="rgb(240, 245, 242)"
                             title="Launch"
                             description="Once your Shopify store is live, we offer continuous support, performance monitoring, and maintenance to ensure long-term success."
                         />
@@ -151,26 +151,25 @@ function ShopifyDevelopment() {
                     <p className='description' style={{marginTop:"25px", textAlign:"center"}}>Embark on a seamless eCommerce journey with our expert Shopify development services. At 610 WebLab, we craft tailored solutions that enhance your store’s performance, usability, and scalability—helping you achieve long-term success in the competitive digital marketplace.</p>
                     <div className="iconboxes">
                         <IconBox
-                            backgroundColor="#fff"
+                            backgroundColor="rgb(249, 249, 255)"
                             title="Best-Fit Solutions"
                             description="We go beyond just meeting your requirements—we optimize your Shopify store for performance, scalability, and cost-effectiveness, ensuring you get the best return on investment."
                         />
 
                         <IconBox
-                            backgroundColor="#fff"
+                            backgroundColor="rgb(248, 247, 242)"
                             title="Expert Shopify Development Team"
                             description="Our team consists of experienced Shopify web designers, developers, quality analysts, and eCommerce strategists who specialize in building high-converting online stores."
                         />
 
                         <IconBox
-                            backgroundColor="#fff"
+                            backgroundColor="rgb(241, 255, 255)"
                             title="Rigorous Testing"
                             description="We rigorously test your Shopify store on 12+ physical devices and multiple browsers, ensuring a flawless user experience across all screen sizes and resolutions."
                         />
                     </div>
                 </div>
             </section>
-            <PortfoliosGrid />
             <CallToAction />
             <Testimonials />
         </div>
