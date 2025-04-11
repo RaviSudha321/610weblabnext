@@ -38,28 +38,28 @@ function PpcServices(){
                     </div>
                     <div className="service_icon_boxes">
                         <IconBox
-                        backgroundColor="#F9F9FF"
+                        backgroundColor="rgb(249, 249, 255)"
                         iconUrl="/images/text-ads.svg"
                         iconWidth="50px"
                         title="Text Ads"
                         description="PPC text ads are a powerful way to position your website at the top of search engine results for highly targeted keywords. Whether you’re promoting a product, service, or content, our tailored ad campaigns ensure your business reaches the right audience at the right time. At 610 WebLab, we craft high-performing text ads that not only improve visibility but also drive real conversions."
                         />
                         <IconBox
-                        backgroundColor="#F1FFFF"
+                        backgroundColor="rgb(248, 247, 242)"
                         iconUrl="/images/display-ads.svg"
                         iconWidth="50px"
                         title="Display Ads"
                         description="Display advertising is a great way to increase brand exposure across Google's extensive network of partnered websites. Our team creates visually compelling, high-converting display ads that capture attention and engage potential customers. With creative ad copies and strategic placements, we ensure maximum reach and impact for your business."
                         />
                         <IconBox
-                        backgroundColor="#F8F7F2"
+                        backgroundColor="rgb(241, 255, 255)"
                         iconUrl="/images/shopping-ads.svg"
                         iconWidth="50px"
                         title="Shopping Ads"
                         description="Shopping ads are the fastest way to showcase your products and attract buyers ready to make a purchase. Our PPC experts optimize your shopping campaigns with precise targeting, competitor analysis, and performance tracking, ensuring your products appear before customers who are most likely to convert. Don't miss out on sales—start driving revenue with our expert Shopping Ad solutions today!"
                         />
                         <IconBox
-                        backgroundColor="#FFFAFE"
+                        backgroundColor="rgb(255, 245, 245)"
                         iconUrl="/images/retargeting.svg"
                         iconWidth="50px"
                         title="Retargeting"
@@ -127,7 +127,7 @@ function PpcServices(){
             buttons={
                 <Button
                 title="Hire An Expert"
-                link="#"
+                link="/contact-us"
                 icon={<img src="/images/hire-an-expert.svg" alt="Hire An Expert" style={{width:"25px"}} />}
                 />
             }

@@ -137,31 +137,36 @@ function OpenSourceDevelopment() {
                         <IconBox
                             title="Open Source Customization"
                             description="We build robust eCommerce solutions, shopping carts, content management systems (CMS), and more to suit your unique business needs."
+                            backgroundColor="rgb(249, 249, 255)"
                         />
 
                         <IconBox
                             title="Open Source Web Development"
                             description="Leverage leading open-source technologies to develop high-performance, scalable, and secure web solutions that drive business success."
+                            backgroundColor="rgb(248, 247, 242)"
                         />
 
                         <IconBox
                             title="Open Source CMS Development"
                             description="610 WebLab delivers feature-rich Content Management System (CMS) development using powerful open-source platforms like WordPress, PHP, Magento, and more."
+                            backgroundColor="rgb(241, 255, 255)"
                         />
                         <IconBox
                             title="Open Source Web Portal Development"
                             description="Build enterprise-grade web portals designed to adapt to evolving business requirements and deliver seamless user experiences."
+                            backgroundColor="#fff5f5"
                         />
                         <IconBox
                             title="Open Source Module Development"
                             description="Enhance the functionality and performance of your website and applications with seamless open-source module development and integration."
+                            backgroundColor="rgb(240 245 242)"
                         />
                     </div>
                 </div>
             </section>
             <ImageText
                 backgroundColor="#f6fcff"
-                title="MagWhy Choose 610 WebLab for Open Source Development?ento"
+                title="Why Choose 610 WebLab for Open Source Development?"
                 description="As a leading open-source development company, we deliver innovative solutions with cutting-edge web technologies. Here’s why businesses trust us:"
                 imageUrl="images/magento-development.webp"
                 imagePosition="left"
@@ -183,7 +188,7 @@ function OpenSourceDevelopment() {
                     </div>
                 }
             />
-            <PortfoliosGrid />
+
             <CallToAction />
             <Testimonials />
         </div>
